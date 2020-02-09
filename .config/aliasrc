@@ -21,4 +21,3 @@ alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
 
 alias rm="rm -i"
 
-# This is a test
