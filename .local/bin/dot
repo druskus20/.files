@@ -1,0 +1,6 @@
+#!/bin/sh
+# Recommended use: "dot commit -a" to only add tracked files
+
+
+# Made as a script for zsh completion (hacky)
+/usr/bin/git --git-dir=$HOME/dot/ --work-tree=$HOME "$@"
