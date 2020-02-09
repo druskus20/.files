@@ -11,7 +11,7 @@ set $mod Mod1
 
 font xft:Noto Sans Nerd Font 10
 
-gaps inner 15
+gaps inner 10
 gaps outer 0
 default_border pixel 2
 # hide_edge_borders smart
