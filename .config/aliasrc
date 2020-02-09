@@ -19,5 +19,4 @@ alias diff="colordiff"
 
 alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
 
-
-# This is a comment
+alias rm="rm -i"

@@ -23,6 +23,9 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
+# I think this autocompletes from the middle of the word
+zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
+
 
 # Emacs mode
 bindkey -e
