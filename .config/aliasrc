@@ -1,0 +1,22 @@
+#!/bin/sh
+
+
+# Colored utilities
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+
+alias open="xdg-open"
+alias la="ls -a"
+alias cats='highlight -O ansi --force'
+alias rg="ranger"
+alias todo="vim ~/doc/todo.md"
+
+alias vim="vi"
+alias vim="nvim"
+alias diff="colordiff"
+
+alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
+
+
