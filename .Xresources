@@ -1,0 +1,61 @@
+!   __  __                                            
+!   \ \/ /_ __ ___  ___  ___  _   _ _ __ ___ ___  ___ 
+!    \  /| '__/ _ \/ __|/ _ \| | | | '__/ __/ _ \/ __|
+!  _ /  \| | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
+! (_)_/\_\_|  \___||___/\___/ \__,_|_|  \___\___||___/
+!                                                     
+!	A configuration made by Druskus
+
+
+! Include a color squeme
+#include ".config/xres/themes/default" 
+ 
+! -------------------- XFT ----------------------
+ 
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+ 
+! -------------------- URXVT --------------------
+
+URxvt.font: xft:DejaVuSansMono Nerd Font:pixelsize=14
+URxvt*scrollBar:                  false
+
+! Might produce some error with vim idk yet
+URxvt*mouseWheelScrollPage:       true 
+URxvt*cursorBlink:                true
+URxvt*saveLines:                  5000
+URxvt*internalBorder:               20 
+
+! Makes some keybinding work
+URxvt.iso14755: 		  false
+
+! Urxvt perls
+URxvt.perl-ext-common: 		  default,matcher,font-size
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+URxvt.keysym.C-equal:  perl:font-size:reset
+URxvt.keysym.C-slash:  perl:font-size:show
+
+! Normal copy-paste keybindings without perls
+URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:     eval:selection_to_clipboard
+
+
+!Xterm escape codes, word by word movement
+URxvt.keysym.Control-Left:        \033[1;5D
+URxvt.keysym.Shift-Control-Left:  \033[1;6D
+URxvt.keysym.Control-Right:       \033[1;5C
+URxvt.keysym.Shift-Control-Right: \033[1;6C
+URxvt.keysym.Control-Up:          \033[1;5A
+URxvt.keysym.Shift-Control-Up:    \033[1;6A
+URxvt.keysym.Control-Down:        \033[1;5B
+URxvt.keysym.Shift-Control-Down:  \033[1;6B
