@@ -6,7 +6,7 @@
 #   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
 #   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 #
-
+#
 
 ######################## 
 ### GENERAL SETTINGS ### 
@@ -35,15 +35,53 @@ format-underline =
 format-overline =
 format-spacing =
 format-padding =
-format-margin = format-offset =
+format-margin = 
+format-offset =
 
 [colors]
-background = #000000 
+#background = #000000 
 background-alt = #444
-foreground = #FFFFFF
+#foreground = #FFFFFF
 foreground-alt = #AAA
 primary = #ffb52a
 alert = #bd2c40
+
+foreground = ${xrdb:foreground}
+background = ${xrdb:background}
+
+# black
+color0 = $[xrdb:color0}
+color8 = $[xrdb:color8} 
+
+# red
+color1 = $[xrdb:color1}
+color9 = $[xrdb:color9}
+
+# green
+color2 = $[xrdb:color2}
+color10 = $[xrdb:color10}
+
+# yellow
+color3 = $[xrdb:color3}
+color11 = $[xrdb:color11}
+
+# blue
+color4 = $[xrdb:color4}
+color12 = $[xrdb:color12}
+
+# magenta
+color5 = $[xrdb:color5}
+color13 = $[xrdb:color13}
+
+# cyan
+color6 = $[xrdb:color6}
+color14 = $[xrdb:color14}
+
+# white
+color7 = ${xrdb:color7}
+color15 = ${xrdb:color15}
+
+
 
 
 ####################
@@ -61,7 +99,7 @@ font-0 = "Noto Sans:size=10;2"
 # For icons
 font-1 = "NotoSans Nerd Font:size=11;2" 
 # For powerline symbols
-font-2 = "NotoSans Nerd Font:size=14;3" 
+font-2 = "NotoSans Nerd Font:size=12;3" 
 
 
 #font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
@@ -76,14 +114,14 @@ width = 100%
 bottom = false
 # For a floating polybar
 # override-redirect = true
-# wm-restack = i3
+wm-restack = bspwm
 
 radius = 0.0
 line-size = 2
 line-color = #000000
 padding-right = 2
 padding-left = 0
-module-margin = 1
+module-margin = 0
 
 # Invisible top border 
 border-color = #00000000
@@ -94,9 +132,9 @@ border-bottom-size = 0
 
 # Modules
 fixed-center = true
-modules-left = i3 arrow2
+modules-left = bspwm arrow1
 modules-center =
-modules-right = arrow1 alsa arrow1 temperature arrow1 cpu arrow1 memory arrow1 eth arrow1 date arrow1 time 
+modules-right = arrow2 alsa arrow2 temperature arrow2 cpu arrow2 memory arrow2 eth arrow2 date arrow2 time 
 
 
 ########################
@@ -106,19 +144,19 @@ modules-right = arrow1 alsa arrow1 temperature arrow1 cpu arrow1 memory arrow1 e
 [module/arrow1]
 type = custom/text
 scroll-up = i3wm-wsnext
-content = "%{T3}%{T-}"
+content = "%{T3} %{T-}"
 content-font = 3
 content-foreground = #A77AC4
 content-background = #292d3e
-
 
 [module/arrow2]
 type = custom/text
 scroll-up = i3wm-wsnext
-content = "%{T3}%{T-}"
+content = "%{T3} %{T-}"
 content-font = 3
 content-foreground = #A77AC4
 content-background = #292d3e
+
 
 ###############
 ### MODULES ###
@@ -172,19 +210,35 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 3
 
 
-# [module/mpd]
-# type = internal/mpd
-# format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-# 
-# icon-prev = 
-# icon-stop = 
-# icon-play = 
-# icon-pause = 
-# icon-next = 
-# 
-# label-song-maxlen = 25
-# label-song-ellipsis = true
+#[module/mpd]
+#type = internal/mpd
+#format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+#
+#icon-prev = 
+#icon-stop = 
+#icon-play = 
+#icon-pause = 
+#icon-next = 
+#
+#label-song-maxlen = 25
+#label-song-ellipsis = true
 
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+inline-mode = false
+enable-click = false
+enable-scroll = false
+reverse-scroll = false
+fuzzy-match = false
+
+
+label-focused-background = #0A0A0A
+label-focused-padding = 2
+label-empty-padding = 2
+label-empty = 
+label-occupied-padding = 2
 
 [module/cpu]
 type = internal/cpu
@@ -264,21 +318,21 @@ ramp-volume-2 = 
 
 
 #bar-volume-width = 10
-# bar-volume-foreground-0 = #55aa55
-# bar-volume-foreground-1 = #55aa55
-# bar-volume-foreground-2 = #55aa55
-# bar-volume-foreground-3 = #55aa55
-# bar-volume-foreground-4 = #55aa55
-# bar-volume-foreground-5 = #f5a70a
-# bar-volume-foreground-6 = #ff5555
-# bar-volume-gradient = false
-# bar-volume-indicator = |
-# bar-volume-indicator-font = 1
-# bar-volume-fill = ─
-# bar-volume-fill-font = 1
-# bar-volume-empty = ─
-# bar-volume-empty-font = 1
-# bar-volume-empty-foreground = ${colors.foreground-alt}
+#bar-volume-foreground-0 = #55aa55
+#bar-volume-foreground-1 = #55aa55
+#bar-volume-foreground-2 = #55aa55
+#bar-volume-foreground-3 = #55aa55
+#bar-volume-foreground-4 = #55aa55
+#bar-volume-foreground-5 = #f5a70a
+#bar-volume-foreground-6 = #ff5555
+#bar-volume-gradient = false
+#bar-volume-indicator = |
+#bar-volume-indicator-font = 1
+#bar-volume-fill = ─
+#bar-volume-fill-font = 1
+#bar-volume-empty = ─
+#bar-volume-empty-font = 1
+#bar-volume-empty-foreground = ${colors.foreground-alt}
 
 
 [module/temperature]
@@ -311,5 +365,4 @@ ramp-3 = 
 ramp-4 = 
 
 # vim:ft=dosini
-
 
