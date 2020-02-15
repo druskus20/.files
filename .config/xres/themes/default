@@ -1,4 +1,6 @@
 
+
+
 ! special
 *.foreground:   #f8f8f2
 *.background:   #282a36
@@ -36,3 +38,8 @@
 *.color7:       #d3d0c8
 *.color15:      #f2f0ec
 
+
+
+
+!!! POLYBAR SPECIFIC SETTINGS !!!
+Polybar.foreground: 	#282a36

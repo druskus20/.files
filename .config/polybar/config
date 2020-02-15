@@ -19,13 +19,13 @@ margin-bottom =
 [colors]
 foreground  = ${xrdb:Polybar.foreground}
 background  = ${xrdb:Polybar.background}
-black       = $[xrdb:Polybar.color0}
-red         = $[xrdb:Polybar.color1}
-green       = $[xrdb:Polybar.color2}
-yellow      = $[xrdb:Polybar.color3}
-blue        = $[xrdb:Polybar.color4}
-magenta     = $[xrdb:Polybar.color5}
-cyan        = $[xrdb:Polybar.color6}
+black       = ${xrdb:Polybar.color0}
+red         = ${xrdb:Polybar.color1}
+green       = ${xrdb:Polybar.color2}
+yellow      = ${xrdb:Polybar.color3}
+blue        = ${xrdb:Polybar.color4}
+magenta     = ${xrdb:Polybar.color5}
+cyan        = ${xrdb:Polybar.color6}
 white       = ${xrdb:Polybar.color7}
 
 [settings]
@@ -86,7 +86,7 @@ wm-restack          = bspwm
 radius          = 0.0
 #line-size      = 2
 #line-color     = #000000
-padding-right   = 2
+padding-right   = 0
 padding-left    = 0
 module-margin   = 0
 
@@ -99,32 +99,80 @@ border-bottom-size = 0
 
 ### Modules ###
 fixed-center   = true
-modules-left   = bspwm arrow1
+modules-left   = bspwm arrow2
 modules-center =
-modules-right  = arrow2 alsa arrow2 temperature arrow2 cpu arrow2 memory arrow2 eth arrow2 date arrow2 time 
+modules-right  = arrow-red1 alsa arrow-green temperature arrow-yellow cpu arrow-blue memory arrow-cyan eth arrow-magenta date arrow-red2 time 
 
 
 ########################
 ### POWERLINE ARROWS ###
 ########################
 
-[module/arrow1]
+[module/arrow-red1]
 type = custom/text
 
-scroll-up    = i3wm-wsnext
-content      = "%{T3} %{T-}"
+content      = "%{T3} %{T-}"
 content-font = 3
-content-foreground = #A77AC4
-content-background = #292d3e
+content-foreground = ${colors.red}
+content-background = ${colors.background} 
+
+[module/arrow-red2]
+type = custom/text
+
+content      = "%{T3} %{T-}"
+content-font = 3
+content-foreground = ${colors.red}
+content-background = ${colors.magenta} 
+
+
+
+[module/arrow-green]
+type = custom/text
+
+content      = "%{T3} %{T-}"
+content-font = 3
+content-foreground = ${colors.green}
+content-background = ${colors.red}
+
+[module/arrow-yellow]
+type = custom/text
+
+content      = "%{T3} %{T-}"
+content-font = 3
+content-foreground = ${colors.yellow}
+content-background = ${colors.green}
+
+[module/arrow-blue]
+type = custom/text
+
+content      = "%{T3} %{T-}"
+content-font = 3
+content-foreground = ${colors.blue}
+content-background = ${colors.yellow} 
+
+[module/arrow-magenta]
+type = custom/text
+
+content      = "%{T3} %{T-}"
+content-font = 3
+content-foreground = ${colors.magenta} 
+content-background = ${colors.cyan} 
+
+[module/arrow-cyan]
+type = custom/text
+
+content      = "%{T3} %{T-}"
+content-font = 3
+content-foreground = ${colors.cyan}
+content-background = ${colors.blue}
 
 [module/arrow2]
 type = custom/text
 
-scroll-up    = i3wm-wsnext
-content      = "%{T3} %{T-}"
+content      = "%{T3} %{T-}"
 content-font = 3
-content-foreground = #A77AC4
-content-background = #292d3e
+content-foreground = ${colors.magenta} 
+content-background = ${colors.background}
 
 
 ###############
@@ -137,13 +185,15 @@ type = internal/date
 format =  <label>
 label  = %date% 
 date   = %d-%m%
+format-background = ${colors.magenta}
 
 [module/time]
 type = internal/date 
 
-format =  <label>
-label  = %time%
-time   = %H:%M
+format = " <label>  "
+label  = %time% 
+time   = %H:%M 
+format-background = ${colors.red}
 
 [module/i3]
 type = internal/i3
@@ -195,6 +245,7 @@ label-urgent-padding     = 3
 [module/bspwm]
 type = internal/bspwm
 
+background     = ${colors.magenta}
 pin-workspaces = true
 inline-mode    = false
 enable-click   = false
@@ -203,11 +254,12 @@ reverse-scroll = false
 fuzzy-match    = false
 
 
-label-focused-background = #0A0A0A
-label-focused-padding    = 2
-label-empty-padding      = 2
-label-empty              = 
-label-occupied-padding   = 2
+label-focused-background  = ${colors.cyan}
+label-focused-padding     = 2
+label-empty-padding       = 2
+label-empty               = 
+label-occupied-background = ${colors.magenta} 
+label-occupied-padding    = 2
 
 [module/cpu]
 type = internal/cpu
@@ -217,6 +269,8 @@ format        = <label> <ramp-coreload>
 format-prefix = ""
 #label-font   = 3
 label         = %percentage:3%%
+
+format-background = ${colors.yellow}
 
 ramp-coreload-spacing      = 1
 ramp-coreload-0            = ▁
@@ -244,6 +298,8 @@ type = internal/memory
 
 interval = 2
 label    =  %mb_used%
+format-background = ${colors.blue}
+
 
 [module/eth]
 type = internal/network
@@ -262,6 +318,9 @@ format-disconnected-prefix = " "
 label-disconnected         = disconnected
 
 
+format-connected-background = ${colors.cyan}
+format-disconected-background = ${colors.cyan}
+
 [module/alsa]
 type = internal/alsa
 
@@ -272,6 +331,7 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
+format-volume-background = ${colors.red}
 #bar-volume-width = 10
 #bar-volume-gradient = false
 #bar-volume-indicator = |
@@ -299,6 +359,7 @@ warn-temperature = 60
 
 
 format      = <ramp> <label>
+format-background = ${colors.green}
 format-warn = <ramp> <label-warn>
 label       = %temperature-c%
 label-warn  =  %temperature-c%
