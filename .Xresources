@@ -9,7 +9,7 @@
 
 ! Include a color squeme
 ! #include ".config/xres/themes/snappy" 
-#include ".config/xres/themes/default" 
+#include ".config/xres/themes/default"
 
 ! -------------------- XFT ----------------------
  

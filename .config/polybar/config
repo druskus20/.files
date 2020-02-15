@@ -16,72 +16,39 @@
 margin-top = 
 margin-bottom = 
 
+[colors]
+foreground  = ${xrdb:Polybar.foreground}
+background  = ${xrdb:Polybar.background}
+black       = $[xrdb:Polybar.color0}
+red         = $[xrdb:Polybar.color1}
+green       = $[xrdb:Polybar.color2}
+yellow      = $[xrdb:Polybar.color3}
+blue        = $[xrdb:Polybar.color4}
+magenta     = $[xrdb:Polybar.color5}
+cyan        = $[xrdb:Polybar.color6}
+white       = ${xrdb:Polybar.color7}
+
 [settings]
-throttle-output = 5
+throttle-output     = 5
 throttle-output-for = 10
-throttle-input-for = 30
+throttle-input-for  = 30
 screenchange-reload = true
 
 #compositing-background = xor
 #compositing-background = screen
 #compositing-foreground = source
-#compositing-border = over
-pseudo-transparency = true
+#compositing-border     = over
+pseudo-transparency     = true
 
 # Fallback values for all formats
-format-foreground = 
-format-background = 
-format-underline =
-format-overline =
-format-spacing =
-format-padding =
-format-margin = 
-format-offset =
-
-[colors]
-#background = #000000 
-background-alt = #444
-#foreground = #FFFFFF
-foreground-alt = #AAA
-primary = #ffb52a
-alert = #bd2c40
-
-foreground = ${xrdb:foreground}
-background = ${xrdb:background}
-
-# black
-color0 = $[xrdb:color0}
-color8 = $[xrdb:color8} 
-
-# red
-color1 = $[xrdb:color1}
-color9 = $[xrdb:color9}
-
-# green
-color2 = $[xrdb:color2}
-color10 = $[xrdb:color10}
-
-# yellow
-color3 = $[xrdb:color3}
-color11 = $[xrdb:color11}
-
-# blue
-color4 = $[xrdb:color4}
-color12 = $[xrdb:color12}
-
-# magenta
-color5 = $[xrdb:color5}
-color13 = $[xrdb:color13}
-
-# cyan
-color6 = $[xrdb:color6}
-color14 = $[xrdb:color14}
-
-# white
-color7 = ${xrdb:color7}
-color15 = ${xrdb:color15}
-
-
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-underline  =
+format-overline   =
+format-spacing    =
+format-padding    =
+format-margin     = 
+format-offset     =
 
 
 ####################
@@ -89,52 +56,52 @@ color15 = ${xrdb:color15}
 ####################
 
 [bar/top-desktop]
-monitor = ${env:MONITOR:HDMI-0}
+monitor     = ${env:MONITOR:HDMI-0}
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background  = ${colors.background}
+foreground  = ${colors.foreground}
 
+### Fonts ###
 # For normal text
-font-0 = "Noto Sans:size=10;2"
+font-0  = "Noto Sans:size=10;2"
 # For icons
-font-1 = "NotoSans Nerd Font:size=11;2" 
+font-1  = "NotoSans Nerd Font:size=11;2" 
 # For powerline symbols
-font-2 = "NotoSans Nerd Font:size=12;3" 
-
-
+font-2  = "NotoSans Nerd Font:size=12;3" 
 #font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
 #font-4 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
 #font-5 = "Font Awesome 5 Brands:pixelsize=8;1"
-font-3 = "DejaVuSansMono Nerd Font:size=11"
+font-3  = "DejaVuSansMono Nerd Font:size=11"
 
 cursor-click = pointer
 
 height = 20
-width = 100%
+width  = 100%
 bottom = false
+
 # For a floating polybar
 # override-redirect = true
-wm-restack = bspwm
+wm-restack          = bspwm
 
-radius = 0.0
-line-size = 2
-line-color = #000000
-padding-right = 2
-padding-left = 0
-module-margin = 0
+radius          = 0.0
+#line-size      = 2
+#line-color     = #000000
+padding-right   = 2
+padding-left    = 0
+module-margin   = 0
 
-# Invisible top border 
-border-color = #00000000
-border-left-size = 10
-border-right-size = 10
-border-top-size = 10
+# Invisible top border (for a floating bar)
+border-color       = #00000000
+border-left-size   = 10
+border-right-size  = 10
+border-top-size    = 10
 border-bottom-size = 0
 
-# Modules
-fixed-center = true
-modules-left = bspwm arrow1
+### Modules ###
+fixed-center   = true
+modules-left   = bspwm arrow1
 modules-center =
-modules-right = arrow2 alsa arrow2 temperature arrow2 cpu arrow2 memory arrow2 eth arrow2 date arrow2 time 
+modules-right  = arrow2 alsa arrow2 temperature arrow2 cpu arrow2 memory arrow2 eth arrow2 date arrow2 time 
 
 
 ########################
@@ -143,16 +110,18 @@ modules-right = arrow2 alsa arrow2 temperature arrow2 cpu arrow2 memory arrow2 e
 
 [module/arrow1]
 type = custom/text
-scroll-up = i3wm-wsnext
-content = "%{T3} %{T-}"
+
+scroll-up    = i3wm-wsnext
+content      = "%{T3} %{T-}"
 content-font = 3
 content-foreground = #A77AC4
 content-background = #292d3e
 
 [module/arrow2]
 type = custom/text
-scroll-up = i3wm-wsnext
-content = "%{T3} %{T-}"
+
+scroll-up    = i3wm-wsnext
+content      = "%{T3} %{T-}"
 content-font = 3
 content-foreground = #A77AC4
 content-background = #292d3e
@@ -164,105 +133,100 @@ content-background = #292d3e
 
 [module/date]
 type = internal/date
+
 format =  <label>
-label = %date% 
-date = %d-%m%
+label  = %date% 
+date   = %d-%m%
 
 [module/time]
 type = internal/date 
+
 format =  <label>
-label = %time%
-time = %H:%M
+label  = %time%
+time   = %H:%M
 
 [module/i3]
 type = internal/i3
 
 format = <label-state> <label-mode>
 
-index-sort = false
-enable-click = false
-enable-scroll = false
+index-sort      = false
+enable-click    = false
+enable-scroll   = false
 wrapping-scroll = false
 
 
-label-mode-padding = 3
+label-mode-padding    = 3
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = #FFF 
 
 # focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-padding = 3
+label-focused            = %index%
+label-focused-background = #FFFFFF
+label-focused-padding    = 3
 
 # unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
-label-unfocused-padding = 3
+label-unfocused          = %index%
+label-unfocused-padding  = 3
 
 # visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible            = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-padding = 3
+label-visible-padding    = 3
 
 # urgent = Workspace with urgency hint set
-label-urgent = %index%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 3
+label-urgent             = %index%
+label-urgent-background  = #FFFFFF 
+label-urgent-padding     = 3
 
 
 #[module/mpd]
 #type = internal/mpd
+
 #format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-#
-#icon-prev = 
-#icon-stop = 
-#icon-play = 
+#icon-prev  = 
+#icon-stop  = 
+#icon-play  = 
 #icon-pause = 
-#icon-next = 
-#
-#label-song-maxlen = 25
+#icon-next  = 
+#label-song-maxlen   = 25
 #label-song-ellipsis = true
 
 [module/bspwm]
 type = internal/bspwm
 
 pin-workspaces = true
-inline-mode = false
-enable-click = false
-enable-scroll = false
+inline-mode    = false
+enable-click   = false
+enable-scroll  = false
 reverse-scroll = false
-fuzzy-match = false
+fuzzy-match    = false
 
 
 label-focused-background = #0A0A0A
-label-focused-padding = 2
-label-empty-padding = 2
-label-empty = 
-label-occupied-padding = 2
+label-focused-padding    = 2
+label-empty-padding      = 2
+label-empty              = 
+label-occupied-padding   = 2
 
 [module/cpu]
 type = internal/cpu
-interval = 3
-format = <label> <ramp-coreload> 
+
+interval      = 3
+format        = <label> <ramp-coreload> 
 format-prefix = ""
-#label-font = 3
-label = %percentage:3%%
-ramp-coreload-spacing = 1
-ramp-coreload-0 = ▁
-ramp-coreload-0-foreground = #FFFFFF
-ramp-coreload-1 = ▂
-ramp-coreload-1-foreground = #FFFFFF 
-ramp-coreload-2 = ▃
-ramp-coreload-2-foreground = #FFFFFF
-ramp-coreload-3 = ▄
-ramp-coreload-3-foreground = #FFFFFF
-ramp-coreload-4 = ▅
-ramp-coreload-4-foreground = #FFFFFF
-ramp-coreload-5 = ▆
-ramp-coreload-5-foreground = #FFFFFF
-ramp-coreload-6 = ▇
-ramp-coreload-6-foreground = #FFFFFF
-ramp-coreload-7 = █
-ramp-coreload-7-foreground = #FFFFFF
+#label-font   = 3
+label         = %percentage:3%%
+
+ramp-coreload-spacing      = 1
+ramp-coreload-0            = ▁
+ramp-coreload-1            = ▂
+ramp-coreload-2            = ▃
+ramp-coreload-3            = ▄
+ramp-coreload-4            = ▅
+ramp-coreload-5            = ▆
+ramp-coreload-6            = ▇
+ramp-coreload-7            = █
 
 
 #ramp-load-0 = ▁
@@ -277,51 +241,38 @@ ramp-coreload-7-foreground = #FFFFFF
 
 [module/memory]
 type = internal/memory
+
 interval = 2
-#format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-label = %mb_used%
+label    =  %mb_used%
 
 [module/eth]
 type = internal/network
+
 interface = enp0s31f6
-interval = 5
+interval  = 5
 
-format-connected = <label-connected>
+format-connected        = <label-connected>
 format-connected-prefix = " "
-label-connected = %local_ip%
+label-connected         = %local_ip%
 
 
 
-format-disconnected = <label-disconnected>
+format-disconnected        = <label-disconnected>
 format-disconnected-prefix = " "
-label-disconnected = disconnected
+label-disconnected         = disconnected
 
 
 [module/alsa]
 type = internal/alsa
 
 format-volume = <ramp-volume> <label-volume>
-#label-volume = VOL
-#label-volume-foreground = ${root.foreground}
-label-muted =  婢 muted
-#format-muted-prefix = " "
-#format-muted-foreground = ${colors.foreground-alt}
-#label-muted = sound muted
+label-muted   =  婢 muted
 
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
-
 #bar-volume-width = 10
-#bar-volume-foreground-0 = #55aa55
-#bar-volume-foreground-1 = #55aa55
-#bar-volume-foreground-2 = #55aa55
-#bar-volume-foreground-3 = #55aa55
-#bar-volume-foreground-4 = #55aa55
-#bar-volume-foreground-5 = #f5a70a
-#bar-volume-foreground-6 = #ff5555
 #bar-volume-gradient = false
 #bar-volume-indicator = |
 #bar-volume-indicator-font = 1
@@ -329,7 +280,6 @@ ramp-volume-2 = 
 #bar-volume-fill-font = 1
 #bar-volume-empty = ─
 #bar-volume-empty-font = 1
-#bar-volume-empty-foreground = ${colors.foreground-alt}
 
 
 [module/temperature]
@@ -342,18 +292,16 @@ interval = 3
 thermal-zone = 2
 
 # /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-hwmon-path = 
-
+hwmon-path       = 
 base-temperature = 20
 warn-temperature = 60
 
 
 
-format = <ramp> <label>
+format      = <ramp> <label>
 format-warn = <ramp> <label-warn>
-
-label = %temperature-c%
-label-warn =  %temperature-c%
+label       = %temperature-c%
+label-warn  =  %temperature-c%
 
 ramp-0 = 
 ramp-1 = 
