@@ -5,7 +5,7 @@
 #
 # Requirements:
 # 	- nerd-fonts: \ue702 for the git symbol
-
+# 	- powerline fonts
 
 # This allows expansions
 setopt prompt_subst
@@ -21,15 +21,6 @@ function virtenv_indicator {
     fi
 }
 
-
-# Powerline icons:
-# 
-
-
-
-
-
-
 # !!! does not reset on zsh re-login (typing zsh).
 # need to fix it in zshrc or something
 
@@ -41,15 +32,6 @@ add-zsh-hook precmd virtenv_indicator
 
 # This needs to be in simple quotes
 # https://unix.stackexchange.com/questions/32124/set-variables-in-zsh-precmd-and-reference-them-in-the-prompt
-PROMPT='%(1V.(%1v) .)'
-
-PROMPT+='%(?:%B%F{green}✓:%B%F{red}✕)%f%b ' # ✓ or ✕ depending on last command 
-PROMPT+='%B%F{red}[%B%F{yellow}%n%B%F{green}@%B%F{blue}%m%f%b %B%F{magenta}%2.%f%b' # [user@host path
-PROMPT+='$(git rev-parse --is-inside-work-tree &>/dev/null && echo "  ")' # git symbol, if inside a repo
-PROMPT+='%B%F{red}]%f%b ➜ ' # ] ➜ 
-
-
-
 
 PROMPT='%B'
 PROMPT+='%F{black}%(?:%K{green} ✓%F{green}%K{yellow}:%K{red} ✕%F{red}%K{yellow})'

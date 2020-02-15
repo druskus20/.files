@@ -167,7 +167,6 @@ type = internal/date
 format =  <label>
 label = %date% 
 date = %d-%m%
-format-underline = #fff
 
 [module/time]
 type = internal/date 
@@ -244,7 +243,6 @@ label-occupied-padding = 2
 type = internal/cpu
 interval = 3
 format = <label> <ramp-coreload> 
-format-underline = #f90000
 format-prefix = ""
 #label-font = 3
 label = %percentage:3%%
@@ -282,7 +280,6 @@ type = internal/memory
 interval = 2
 #format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
 label = %mb_used%
 
 [module/eth]

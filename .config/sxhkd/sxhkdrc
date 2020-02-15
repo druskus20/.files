@@ -14,8 +14,8 @@ alt + Return
 	urxvt
 
 # program launcher
-alt + @space
-	dmenu_run
+alt + d
+	dmenu_recency
 
 # make sxhkd reload its configuration files:
 alt + Escape

@@ -9,7 +9,7 @@
 
 # Enable colors and change prompt:
 autoload -U colors && colors
-source $HOME/.config/zsh/themes/rainbowie.zsh-theme
+source $HOME/.config/zsh/themes/rainbowie-pl.zsh-theme
 
 # History in cache directory:
 HISTSIZE=1000000

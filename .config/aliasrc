@@ -23,3 +23,5 @@ alias rm="rm -i"
 
 # Shows only hidden files (only on current directory)
 alias lh="ls -d -1 .?*"
+
+alias neofetch="clear && neofetch"

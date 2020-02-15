@@ -8,8 +8,9 @@
 
 
 ! Include a color squeme
+! #include ".config/xres/themes/snappy" 
 #include ".config/xres/themes/default" 
- 
+
 ! -------------------- XFT ----------------------
  
 Xft.dpi:       96
