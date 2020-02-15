@@ -1,59 +1,119 @@
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
+#
+#   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+#   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+#   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+#   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+#   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+#   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+#
+
+
+######################## 
+### GENERAL SETTINGS ### 
+########################
+
+[global/wm]
+margin-top = 
+margin-bottom = 
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = true
+
+#compositing-background = xor
+#compositing-background = screen
+#compositing-foreground = source
+#compositing-border = over
+pseudo-transparency = true
+
+# Fallback values for all formats
+format-foreground = 
+format-background = 
+format-underline =
+format-overline =
+format-spacing =
+format-padding =
+format-margin = format-offset =
 
 [colors]
 background = #000000 
 background-alt = #444
 foreground = #FFFFFF
 foreground-alt = #AAA
-
 primary = #ffb52a
 alert = #bd2c40
 
-[bar/classic]
-monitor = ${env:MONITOR:HDMI-0}
 
-height = 24
-width = 100%
+####################
+### BAR SETTINGS ### 
+####################
+
+[bar/top-desktop]
+monitor = ${env:MONITOR:HDMI-0}
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-; Using 2 fonts, the second one is for bigger icons
-font-0 = "Noto Sans:size=11"
-font-1 = "NotoSans Nerd Font:size=11"
+# For normal text
+font-0 = "Noto Sans:size=10;2"
+# For icons
+font-1 = "NotoSans Nerd Font:size=11;2" 
+# For powerline symbols
+font-2 = "NotoSans Nerd Font:size=14;3" 
 
+
+#font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
+#font-4 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
+#font-5 = "Font Awesome 5 Brands:pixelsize=8;1"
+font-3 = "DejaVuSansMono Nerd Font:size=11"
 
 cursor-click = pointer
 
+height = 20
+width = 100%
+bottom = false
 # For a floating polybar
 # override-redirect = true
 # wm-restack = i3
 
-modules-left = i3
-modules-center =
-modules-right = cpu memory date time 
+radius = 0.0
+line-size = 2
+line-color = #000000
+padding-right = 2
+padding-left = 0
+module-margin = 1
 
+# Invisible top border 
 border-color = #00000000
 border-left-size = 10
 border-right-size = 10
 border-top-size = 10
 border-bottom-size = 0
 
+# Modules
+fixed-center = true
+modules-left = i3
+modules-center =
+modules-right = arrow1 alsa arrow1 cpu arrow1 memory arrow1 date arrow1 time 
 
 
+########################
+### POWERLINE ARROWS ###
+########################
+
+[module/arrow1]
+scroll-up = i3wm-wsnext
+content = "%{T3} %{T-}"
+content-font = 3
+content-foreground = #A77AC4
+content-background = #292d3e
 
 
-
-
-
-
+###############
+### MODULES ###
+###############
 
 [module/date]
 type = internal/date
@@ -70,8 +130,12 @@ time = %H:%M
 
 [module/i3]
 type = internal/i3
+
 format = <label-state> <label-mode>
-index-sort = true
+
+index-sort = false
+enable-click = false
+enable-scroll = false
 wrapping-scroll = false
 
 
@@ -79,49 +143,78 @@ label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
-; focused = Active workspace on focused monitor
+# focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
-; unfocused = Inactive workspace on any monitor
+# unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
 label-unfocused-padding = 2
 
-; visible = Active workspace on unfocused monitor
+# visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
-; urgent = Workspace with urgency hint set
+# urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 
-; [module/mpd]
-; type = internal/mpd
-; format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-; 
-; icon-prev = 
-; icon-stop = 
-; icon-play = 
-; icon-pause = 
-; icon-next = 
-; 
-; label-song-maxlen = 25
-; label-song-ellipsis = true
+# [module/mpd]
+# type = internal/mpd
+# format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+# 
+# icon-prev = 
+# icon-stop = 
+# icon-play = 
+# icon-pause = 
+# icon-next = 
+# 
+# label-song-maxlen = 25
+# label-song-ellipsis = true
 
 
 [module/cpu]
 type = internal/cpu
-interval = 2
-format-prefix = ""
-format-prefix-foreground = ${colors.foreground-alt}
+interval = 3
+format = <label> <ramp-coreload> 
 format-underline = #f90000
-label = %percentage:2%%
+
+#label-font = 3
+label = %percentage:3%%
+ramp-coreload-spacing = 1
+ramp-coreload-0 = ▁
+ramp-coreload-0-foreground = #FFFFFF
+ramp-coreload-1 = ▂
+ramp-coreload-1-foreground = #FFFFFF 
+ramp-coreload-2 = ▃
+ramp-coreload-2-foreground = #FFFFFF
+ramp-coreload-3 = ▄
+ramp-coreload-3-foreground = #FFFFFF
+ramp-coreload-4 = ▅
+ramp-coreload-4-foreground = #FFFFFF
+ramp-coreload-5 = ▆
+ramp-coreload-5-foreground = #FFFFFF
+ramp-coreload-6 = ▇
+ramp-coreload-6-foreground = #FFFFFF
+ramp-coreload-7 = █
+ramp-coreload-7-foreground = #FFFFFF
+
+
+#ramp-load-0 = ▁
+#ramp-load-1 = ▂
+#ramp-load-2 = ▃
+#ramp-load-3 = ▄
+#ramp-load-4 = ▅
+#ramp-load-5 = ▆
+#ramp-load-6 = ▇
+#ramp-load-7 = █
+
 
 [module/memory]
 type = internal/memory
@@ -142,10 +235,10 @@ format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
 format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+#format-disconnected = <label-disconnected>
+#format-disconnected-underline = ${self.format-connected-underline}
+#label-disconnected = %ifname% disconnected
+#label-disconnected-foreground = ${colors.foreground-alt}
 
 
 [module/alsa]
@@ -167,25 +260,16 @@ bar-volume-foreground-3 = #55aa55
 bar-volume-foreground-4 = #55aa55
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
+bar-volume-gradient = true
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 1
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 1
 bar-volume-empty = ─
-bar-volume-empty-font = 2
+bar-volume-empty-font = 1
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
 
-[global/wm]
-margin-top = 5
-margin-bottom = 5
 
-; vim:ft=dosini
+# vim:ft=dosini
+

@@ -30,4 +30,4 @@ export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 # Utilities
 export EDITOR=/usr/bin/nvim
 export BROWSER=/usr/bin/firefox
-export TERMINAL=/usr/bin/terminal
+export TERMINAL=/usr/bin/terminal-daemon

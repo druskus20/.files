@@ -23,6 +23,7 @@ Xft.lcdfilter: lcddefault
 ! -------------------- URXVT --------------------
 
 URxvt.font: xft:DejaVuSansMono Nerd Font:pixelsize=14
+! URxvt.font: xft:DejaVuSansMono Nerd Font:pixelsize=14
 URxvt*scrollBar:                  false
 
 ! Might produce some error with vim idk yet
