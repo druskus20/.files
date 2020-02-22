@@ -332,6 +332,7 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 
 format-volume-background = ${colors.red}
+format-muted-background = ${colors.red}
 #bar-volume-width = 10
 #bar-volume-gradient = false
 #bar-volume-indicator = |

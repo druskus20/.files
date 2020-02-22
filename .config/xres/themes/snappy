@@ -18,3 +18,8 @@
 *color14:     #9aedfe
 *color7:      #eff0eb
 *color15:     #eff0eb
+
+
+
+!!! POLYBAR SPECIFIC SETTINGS !!!
+Polybar.foreground: 	#282a36
