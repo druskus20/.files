@@ -264,7 +264,7 @@ label-occupied-padding    = 2
 [module/cpu]
 type = internal/cpu
 
-interval      = 3
+interval      = 1
 format        = <label> <ramp-coreload> 
 format-prefix = ""
 #label-font   = 3
@@ -319,7 +319,7 @@ label-disconnected         = disconnected
 
 
 format-connected-background = ${colors.cyan}
-format-disconected-background = ${colors.cyan}
+format-disconnected-background = ${colors.cyan}
 
 [module/alsa]
 type = internal/alsa
