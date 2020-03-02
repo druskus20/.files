@@ -30,7 +30,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-20+50"
+    geometry = "400x4-20+50"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -47,7 +47,7 @@
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
     # to the font height and padding.
-    notification_height = 60 
+    notification_height = 90
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -87,7 +87,7 @@
 
     ### Text ###
 
-    font = Noto Sans Nerd Font Regular
+    font = Noto Sans Nerd Font Regular 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -173,7 +173,7 @@
     min_icon_size = 0
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 100
 
     # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -292,7 +292,7 @@
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#285577"
+    background = "#222222"
     foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable

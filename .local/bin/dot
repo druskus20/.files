@@ -3,4 +3,4 @@
 
 
 # Made as a script for zsh completion (hacky)
-/usr/bin/git --git-dir=$HOME/dot/ --work-tree=$HOME "$@"
+/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME "$@"
