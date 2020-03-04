@@ -4,7 +4,7 @@
 picom -b
 #conky --pause=5 -q
 xautolock -time 10 -locker blurlock &
-set-bg /home/druskus/img/bg/purple_coast.jpg
+set-bg /home/druskus/img/bg/fish.jpg
 $HOME/.config/polybar/launch.sh
 
 # Disable pc speaker

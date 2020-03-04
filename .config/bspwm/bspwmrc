@@ -41,3 +41,11 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 bspc config external_rules_command "bspwm-colorsrc"
+
+
+
+
+
+
+bspc rule -a Zathura state=tiled
+
