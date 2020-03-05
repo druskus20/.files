@@ -41,5 +41,11 @@
 
 
 
-!!! POLYBAR SPECIFIC SETTINGS !!!
+!!! POLYBAR !!!
 Polybar.foreground: 	#282a36
+
+!!! DMENU !!!
+! dmenu.background:	#FFFFFF
+! dmenu.foreground:	#FFFFFF
+! dmenu.selbackground: 	#FFFFFF
+! dmenu.selforeground: 	#FFFFFF

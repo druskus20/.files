@@ -26,8 +26,4 @@ alias lh="ls -d -1 .?*"
 
 alias neofetch="clear && neofetch"
 
-
-
 alias zathura="nohup zathura > /dev/null 2> /dev/null" 
-
-

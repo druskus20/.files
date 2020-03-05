@@ -30,9 +30,8 @@ alt + control + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-alt + {_,shift + }q
-	bspc node -{c,k}
-
+alt + shift + q
+	bspc node -c
 # alternate between the tiled and monocle layout
 alt + f
 	bspc desktop -l next

@@ -198,7 +198,7 @@ format-background = ${colors.red}
 [module/i3]
 type = internal/i3
 
-format = <label-state> <label-mode>
+format =  <label-mode> <label-state>
 
 index-sort      = false
 enable-click    = false
@@ -260,6 +260,31 @@ label-empty-padding       = 2
 label-empty               = 
 label-occupied-background = ${colors.magenta} 
 label-occupied-padding    = 2
+; The following labels will be used to indicate the layout/mode
+; for the focused workspace. Requires <label-mode>
+;
+; Available tokens:
+;   None
+
+# format = <label-state><label-mode>
+# 
+# label-monocle = "  monocle"
+# label-monocle-background = ${colors.magenta}
+# label-tiled = "  tiled"
+# label-tiled-background = ${colors.magenta}
+# label-fullscreen = "  fullscreen"
+# label-fullscreen-background = ${colors.magenta}
+# label-floating = "  floating"
+# label-floating-background = ${colors.magenta}
+# label-pseudotiled = "  pseudotiled"
+# label-locked = "  locked"
+# label-locked-background = ${colors.magenta}
+# label-sticky = "  sticky"
+# label-sticky-background = ${colors.magenta}
+# label-private = "  private"
+# label-private-background = ${colors.magenta}
+# label-marked = "  marked"
+# label-marked-background = ${colors.magenta}
 
 [module/cpu]
 type = internal/cpu
