@@ -9,7 +9,7 @@
 
 ! Include a color squeme
 ! #include ".config/xres/themes/snappy" 
-#include ".config/xres/themes/default"
+#include ".config/xrdb/themes/dracula"
 
 ! -------------------- XFT ----------------------
  
@@ -62,6 +62,8 @@ URxvt.keysym.Shift-Control-Up:    \033[1;6A
 URxvt.keysym.Control-Down:        \033[1;5B
 URxvt.keysym.Shift-Control-Down:  \033[1;6B
 
+! Makes bold colors not change (fix zsh powerline issue)
+URxvt.intensityStyles: 		  false
 
 ! -------------------- DMENU --------------------
 

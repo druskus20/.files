@@ -80,7 +80,10 @@ setopt PATH_DIRS               # perform path search even on command names with 
 # setopt SHARE_HISTORY           # write and import history on every command
 setopt C_BASES                 # print hex/oct numbers as 0xFF/077 instead of 16#FF/8#77
 
-unsetopt menu_complete   # do not autoselect the first completion entry
+unsetopt MENU_COMPLETE   # do not autoselect the first completion entry
 setopt AUTO_MENU         # show completion menu on successive tab press
+
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY	 
 
 setopt ALWAYS_TO_END

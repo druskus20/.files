@@ -15,7 +15,7 @@ alt + Return
 
 # program launcher
 alt + d
-	dmenu_recency
+	dmenu_opener
 
 # make sxhkd reload its configuration files:
 alt + Escape

@@ -34,6 +34,7 @@ add-zsh-hook precmd virtenv_indicator
 # https://unix.stackexchange.com/questions/32124/set-variables-in-zsh-precmd-and-reference-them-in-the-prompt
 
 PROMPT='%B'
+
 PROMPT+='%F{black}%(?:%K{green} ✓%F{green}%K{yellow}:%K{red} ✕%F{red}%K{yellow})'
 PROMPT+='%F{black}%n'
 PROMPT+='%F{yellow}%K{blue}'
@@ -43,6 +44,7 @@ PROMPT+='%F{black}%K{magenta}%2.'
 PROMPT+='$(git rev-parse --is-inside-work-tree &>/dev/null && echo "  ")'
 PROMPT+='%F{magenta}'
 PROMPT+='%k%b%f '
+
 
 
 
