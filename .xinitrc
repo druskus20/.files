@@ -1,11 +1,14 @@
 # xinitrc (sourced by /etc/lightdm/XSession
 
 # Start some programs
-picom -b
+picom -b > /dev/null 2> /dev/null
 #conky --pause=5 -q
-xautolock -time 10 -locker "betterlockscreen --lock blur" &
 set-bg /home/druskus/img/bg/fish.jpg
-$HOME/.config/polybar/launch.sh
+cat .cache/background | xargs betterlockscreen -u &  
+xautolock -time 10 -locker "betterlockscreen --lock blur" &
+
+
+$HOME/.config/polybar/launch.sh > /dev/null 2> /dev/null
 
 # Disable pc speaker
 xset -b
@@ -15,4 +18,4 @@ xset r rate 300 50 &
 
 # Finally load keybinding 
 # (so we make sure that they are loaded at the same time as bspwm)
-sxhkd &
+sxhkd & 

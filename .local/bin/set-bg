@@ -1,0 +1,15 @@
+#!/bin/sh
+#  Script that sets the background via feh
+#  Note, it needs an absolute path to work
+
+
+if [ $# -eq 0 ]; then
+	>&2 echo "No argument provided"	
+	exit 1
+elif [ ! -f "$1" ]; then
+	>&2 echo "File doesnt exist."
+fi
+
+feh --no-fehbg --bg-scale "$1"
+
+echo "$(realpath $1)" > "$XDG_CACHE_HOME"/background 
