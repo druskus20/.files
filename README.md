@@ -14,11 +14,11 @@ My main machine is a desktop pc running Manjaro i3. I've stripped most of the de
 * Fetch: pfetch
 * File Manager: lf
 * Editor: neovim, vscode
-* Font: Noto Sans (Interface) DejaVu (Terminal)
+* Font: Noto Sans Nerd Font (Interface) DejaVu Sans Mono Nerd Font (Terminal)
 * Color theme: look into ~/.Xresources and ~/.config/xrdb
 * Shell: zsh (theme: my own rainbowie)
 * Bar: Polybar
 * Notification daemon: Dunst
 * Program Launcher: dmenu (~/.local/bin/dmenu_launcher). https://github.com/druskus20/dmenu-build
-* Lock Screen: blurlock
+* Lock Screen: betterlockscreen
 * Transparency: picom
