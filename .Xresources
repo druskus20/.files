@@ -68,4 +68,6 @@ URxvt.intensityStyles: 		  false
 ! -------------------- DMENU --------------------
 
 
-dmenu.font : DejaVu Sans Mono Nerd Font-10
+Dmenu.font : DejaVu Sans Mono Nerd Font-10
+Dmenu.border: 5;
+Dmenu.center: 1;
