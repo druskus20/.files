@@ -20,4 +20,5 @@ My main machine is a desktop pc running Manjaro i3. I've stripped most of the de
 * Bar: Polybar
 * Notification daemon: Dunst
 * Program Launcher: dmenu (~/.local/bin/dmenu_launcher). https://github.com/druskus20/dmenu-build
-
+* Lock Screen: blurlock
+* Transparency: picom
