@@ -8,8 +8,9 @@
 
 
 ! Include a color squeme
-! #include ".config/xres/themes/snappy" 
-#include ".config/xrdb/themes/dracula"
+#include ".config/xrdb/themes/default" 
+
+! #include ".config/xrdb/themes/dracula"
 
 ! -------------------- XFT ----------------------
  
