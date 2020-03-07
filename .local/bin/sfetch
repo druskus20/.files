@@ -14,6 +14,8 @@ host="$(hostname)"
 os='Manjaro'
 packages="$(pacman -Q | wc -l)"
 shell="$(basename "$SHELL")"
+term="$(ps -o comm= -p "$(($(ps -o ppid= -p "$(($(ps -o sid= -p "$$")))")))")"
+
 
 ## WM DETECTION
 if [ -n "${XDG_CURRENT_DESKTOP}" ]; then
@@ -57,14 +59,13 @@ c0="${reset}${blue}"               # first color
 cat <<EOF
 
 ${nc}           ${user}${ic}@${nc}${host}${reset}
-${c0} (    /\   ${lc}os:        ${ic}${os}${reset}
-${c0}  )  ( ${cyan}'${c0})  ${lc}shell:     ${ic}${shell}${reset}
-${c0} (  /  )   ${lc}wm:        ${ic}${wm}${reset}
+${c0} (    /\   ${lc}wm:        ${ic}${wm}${reset}
+${c0}  )  ( ${cyan}'${c0})  ${lc}terminal:  ${ic}${term}${reset}
+${c0} (  /  )   ${lc}shell:     ${ic}${shell}${reset}
 ${c0}  \(__)|   ${lc}packages:  ${ic}${packages}${reset}
-
-           ${palette}           
 
 EOF
 
+#            ${palette} 
 
 
