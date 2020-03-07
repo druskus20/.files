@@ -1,0 +1,52 @@
+
+
+! special
+*.foreground:   #f8f8f2
+*.background:   #282a36
+*.cursorColor:  #f8f8f2
+
+! black
+*.color0:       #282a36
+*.color8:       #3b3d44
+
+! red
+*.color1:       #f2777a
+*.color9:       #ff979a
+
+! green
+*.color2:       #99cc99
+*.color10:      #b0ccb0
+
+! yellow
+*.color3:       #ffcc66
+*.color11:      #ffd786
+
+! blue
+*.color4:       #6699cc
+*.color12:      #81a7cc
+
+! magenta
+*.color5:       #cc99cc
+*.color13:      #ccaacc
+
+! cyan
+*.color6:       #66cccc
+*.color14:      #90cccc
+
+! white
+*.color7:       #d3d0c8
+*.color15:      #f2f0ec
+
+
+
+
+
+!!! POLYBAR !!!
+Polybar.foreground: 	#282a36
+
+!!! DMENU !!!
+Dmenu.background:	    #282a36
+Dmenu.foreground:	    #cc99cc
+Dmenu.selbackground: 	#cc99cc
+Dmenu.selforeground: 	#282a36
+
