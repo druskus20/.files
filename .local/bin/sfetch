@@ -1,143 +1,70 @@
 #!/bin/sh
 
-# sfetch - simple fetch
-# A simplified version of pfetch
-#   Dont use it. Its bad. Use pfetch. Its good.
-
-
-get_user() {
-    # Make sure we only call the function one time
-    [ -z "$user"  ] || return
-
-    # Username is retrieved by first checking '$USER' with a fallback
-    # to the 'id -un' command.
-    user=${USER:-$(id -un)}
-}
-
-get_host() {
-    # Make sure we only call the function one time
-    [ -z "$host"  ] || return
-
-    # Username is retrieved by first checking '$USER' with a fallback
-    # to the 'id -un' command.
-    host=${HOST:-$(hostname)}
-}
-
-
-get_title() {
-    # If user or host is not retrieved, call get_user and get_host
-    [ -z "$user"  ] && get_user
-    [ -z "$host"  ] && get_host
-    
-    title=$user"@"$host
-}
-
-get_packages() {
-    packages="$(pacman -Qq | wc -l)"
-}
-
-get_shell() {    
-    shell="${SHELL##*/}"
-}
-
-get_editor() {
-    editor="${EDITOR##*/}" 
-
-}
-
-get_wm(){
-    # Don't display window manager if X isn't running.
-    [ "$DISPLAY" ] || return
-
-    command -v xprop > /dev/null && {
-        # The output of the ID command is as follows:
-        # _NET_SUPPORTING_WM_CHECK: window id # 0x400000
-        #
-        # To extract the ID, everything before the last space
-        # is removed.
-        id=$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)
-        id=${id##* }
-
-        # The output of the property command is as follows:
-        # _NAME 8t
-        # _NET_WM_PID = 252
-        # _NET_WM_NAME = "bspwm"
-        # _NET_SUPPORTING_WM_CHECK: window id # 0x400000
-        # WM_CLASS = "wm", "Bspwm"
-        #
-        # To extract the name, everything before '_NET_WM_NAME = \"'
-        # is removed and everything after the next '"' is removed.
-        wm=$(xprop -id "$id" -notype -len 25 -f _NET_WM_NAME 8t)
-
-        # Handle cases of a window manager _not_ populating the
-        # '_NET_WM_NAME' atom. Display nothing in this case.
-        wm=${wm##*_NET_WM_NAME = \"}
-        wm=${wm%%\"*}
-
-    } 
-}
-
-get_palette(){
-
-    {
-        c1='[31m'; c2='[32m'
-        c3='[33m'; c4='[34m'
-        c5='[35m'; c6='[36m'
-        c7='[37m'; c8='[38m'
-    }
-    palette="[7m$c1  $c2  $c3  $c4  $c5  $c6  [m"
-
-}
-
-# get_asciiart() {
-#     
-# }
-
+# --- sfetch ---
 #     __     
 #    ( ->      
 #    / )\      
 #   <_/_/   
 #    " " 
+# My personal version of ufetch
+
+
+user=$USER
+host="$(hostname)"
+os='Manjaro'
+packages="$(pacman -Q | wc -l)"
+shell="$(basename "$SHELL")"
+
+## WM DETECTION
+if [ -n "${XDG_CURRENT_DESKTOP}" ]; then
+	wm="${XDG_CURRENT_DESKTOP}"
+elif [ -n "${DESKTOP_SESSION}" ]; then
+	wm="${DESKTOP_SESSION}"
+elif [ -f "${HOME}/.xinitrc" ]; then
+	wm="$(tail -n 1 "${HOME}/.xinitrc" | cut -d ' ' -f 2)"
+elif [ -f "${HOME}/.xsession" ]; then
+	wm="$(tail -n 1 "${HOME}/.xsession" | cut -d ' ' -f 2)"
+else
+	wm='unknown'
+fi
+
+## DEFINE COLORS
+
+# probably don't change these
+if [ -x "$(command -v tput)" ]; then
+	bold="$(tput bold)"
+	black="$(tput setaf 0)"
+	red="$(tput setaf 1)"
+	green="$(tput setaf 2)"
+	yellow="$(tput setaf 3)"
+	blue="$(tput setaf 4)"
+	magenta="$(tput setaf 5)"
+	cyan="$(tput setaf 6)"
+	white="$(tput setaf 7)"
+	reset="$(tput sgr0)"
+    palette="[7m$red  $green  $yellow  $blue  $magenta  $cyan  [m"
+fi
+
+# you can change these
+lc="${reset}${bold}${blue}"           # labels
+nc="${reset}${bold}${blue}"           # user and hostname
+ic="${reset}"                         # info
+c0="${reset}${blue}"               # first color
 
 
 
+## OUTPUT
+cat <<EOF
 
+${nc}           ${user}${ic}@${nc}${host}${reset}
+${c0} (    /\   ${lc}os:        ${ic}${os}${reset}
+${c0}  )  ( ${cyan}'${c0})  ${lc}shell:     ${ic}${shell}${reset}
+${c0} (  /  )   ${lc}wm:        ${ic}${wm}${reset}
+${c0}  \(__)|   ${lc}packages:  ${ic}${packages}${reset}
 
-main() {
-    # Hide 'stderr' unless the first argument is '-v'. This saves
-    # polluting the script with '2>/dev/null'.
-    [ "$1" = -v ] || exec 2>/dev/null
+           ${palette}           
 
-
-    # Colors
-    {
-        c1='[31m'; c2='[32m'
-        c3='[33m'; c4='[34m'
-        c5='[35m'; c6='[36m'
-        c7='[37m'; c8='[38m'
-    }
-
-    get_user
-    get_host
-    get_title
-    get_shell
-    get_packages
-    get_wm
-    get_editor
-    get_palette
-
-    printf "%s\n"  "$user"
-    printf "%s\n"  "$host"
-    printf "%s\n"  "$title"
-    printf "%s\n"  "$shell"
-    printf "%s\n"  "$packages"
-    printf "%s\n"  "$wm"
-    printf "%s\n"  "$editor"
-    printf "%s\n"  "$palette"
-
-
-}
+EOF
 
 
 
-main "$@"
