@@ -6,7 +6,7 @@
 *.cursorColor:  #f8f8f2
 
 ! black
-*.color0:       #282a36
+*.color0:       #3b3d44
 *.color8:       #3b3d44
 
 ! red
@@ -50,3 +50,9 @@ Dmenu.foreground:	    #cc99cc
 Dmenu.selbackground: 	#cc99cc
 Dmenu.selforeground: 	#282a36
 
+!!! BSPWM !!!
+
+! Bspwm.normal_border_color:   #FFFFFA
+! Bspwm.active_border_color:   #FFFFFB
+! Bspwm.focused_border_color:  #FFFFFC
+! Bspwm.presel_feedback_color: #FFFFFD

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# dmenu_launcher
-#  	a script to run programs based on dmenu_recency
-#	edited to not use a config file
+# --- dmenu_launcher ---
+#   a script to launch programs
+#   based on dmenu_recency
 
 if [ -z "$TERMINAL_CMD" ]; then
   if [ "$(which terminal)" ]; then
