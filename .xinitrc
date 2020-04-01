@@ -13,9 +13,10 @@ $HOME/.config/polybar/launch.sh > /dev/null 2> /dev/null
 # Disable pc speaker
 xset -b
 
-# Speed up keyboard input
-xset r rate 300 50 &	
 
 # Finally load keybinding 
 # (so we make sure that they are loaded at the same time as bspwm)
 sxhkd & 
+
+# Speed up keyboard input
+xset r rate 300 50 &	

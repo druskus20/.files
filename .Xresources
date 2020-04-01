@@ -8,7 +8,7 @@
 
 
 ! Include a color squeme
- #include ".config/xrdb/themes/default2" 
+ #include ".config/xrdb/themes/dt" 
 ! #include ".config/xrdb/themes/dracula"
 
 ! -------------------- XFT ----------------------
@@ -68,5 +68,5 @@ URxvt.intensityStyles: 		  false
 
 
 Dmenu.font : DejaVu Sans Mono Nerd Font-10
-Dmenu.border: 5;
-Dmenu.center: 1;
+Dmenu.border: 2;
+Dmenu.center: 0;

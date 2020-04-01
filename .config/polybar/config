@@ -56,7 +56,7 @@ format-offset     =
 ####################
 
 [bar/top-desktop]
-monitor     = ${env:MONITOR:HDMI-0}
+monitor     = ${env:MONITOR:HDMI-1}
 
 background  = ${colors.background}
 foreground  = ${colors.foreground}
