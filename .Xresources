@@ -8,7 +8,7 @@
 
 
 ! Include a color squeme
- #include ".config/xrdb/themes/dt" 
+ #include ".config/xrdb/themes/sourcery"
 ! #include ".config/xrdb/themes/dracula"
 
 ! -------------------- XFT ----------------------

@@ -19,13 +19,8 @@ export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
 #export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
-
-
-
 # Fails with LightDM
 # export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
-
-
 
 # Utilities
 export EDITOR=/usr/bin/nvim

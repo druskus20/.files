@@ -37,7 +37,7 @@ PROMPT='%(1V.(%1v) .)'
 
 PROMPT+='%(?:%B%F{green}✓:%B%F{red}✕)%f%b ' # ✓ or ✕ depending on last command 
 PROMPT+='%B%F{red}[%B%F{yellow}%n%B%F{green}@%B%F{blue}%m%f%b %B%F{magenta}%2.%f%b' # [user@host path
-PROMPT+='$(git rev-parse --is-inside-work-tree &>/dev/null && echo "  ")' # git symbol, if inside a repo
+PROMPT+='%B$(git rev-parse --is-inside-work-tree &>/dev/null && echo "  ")%b' # git symbol, if inside a repo
 PROMPT+='%B%F{red}]%f%b ➜ ' # ] ➜ 
 
 #RPROMPT=''

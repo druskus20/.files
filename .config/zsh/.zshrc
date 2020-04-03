@@ -59,8 +59,7 @@ unsetopt flow_control    # Disable Ctrl+S and Ctrl+Q (in zsh)
 # Load plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
-
-
+source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 
 
 # Keysbindings for plugins
 bindkey '^[[A' history-substring-search-up
@@ -80,8 +79,8 @@ setopt PATH_DIRS               # perform path search even on command names with 
 # setopt SHARE_HISTORY           # write and import history on every command
 setopt C_BASES                 # print hex/oct numbers as 0xFF/077 instead of 16#FF/8#77
 
-unsetopt MENU_COMPLETE   # do not autoselect the first completion entry
-setopt AUTO_MENU         # show completion menu on successive tab press
+unsetopt MENU_COMPLETE        # do not autoselect the first completion entry
+setopt AUTO_MENU              # show completion menu on successive tab press
 
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY	 
