@@ -3,7 +3,7 @@
 # Start some programs
 picom -b > /dev/null 2> /dev/null &
 #conky --pause=5 -q
-set-bg /home/druskus/img/bg/fish.jpg &
+setbg /home/druskus/img/bg/fish.jpg &
 # cat .cache/background | xargs betterlockscreen -u &  
 xautolock -time 10 -locker "betterlockscreen --lock blur" &
 $HOME/.config/polybar/launch.sh > /dev/null 2> /dev/null 
