@@ -25,9 +25,13 @@ alt + Escape
 # bspwm hotkeys
 #
 
-# quit/restart bspwm
-alt + control + {q,r}
-	bspc {quit,wm -r}
+# open powermenu
+alt + control + q
+	powermenu
+
+# restart bspwm
+alt + control + r
+	bspc wm -r
 
 # close and kill
 alt + shift + q

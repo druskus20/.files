@@ -3,12 +3,12 @@
 
 [ $(id -u) -eq 0 ] && echo "Do not run this as root" && exit
 
-case "$(echo -e "Shutdown\nRestart\nLogout\nSuspend\nLock" | dmenu \
+case "$(echo -e "Lock\nLogout\nSuspend\nShutdown\nReboot" | dmenu \
     -i -p \
     "Power:" -l 5)" in
-        Shutdown) exec systemctl poweroff;;
-        Restart) exec systemctl reboot;;
+        Lock) exec betterlockscreen -l;;
         Logout) exec bspc quit;;
         Suspend) exec systemctl suspend;;
-        Lock) exec betterlockscreen -l;;
+        Shutdown) exec systemctl poweroff;;
+        Reboot) exec systemctl reboot;;
 esac
