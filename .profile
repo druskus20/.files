@@ -26,3 +26,4 @@ export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export EDITOR=/usr/bin/nvim
 export BROWSER=/usr/bin/firefox
 export TERMINAL=/usr/bin/terminal-daemon
+export PATH="$PATH:$HOME/.local/bin/scripts"

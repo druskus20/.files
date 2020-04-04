@@ -1,0 +1,5 @@
+#!/bin/sh
+# Open and edit dotfiles tracked in my dotfile repo
+
+file=$(dot ls-tree -r master --name-only | sed -E '/\.(png|jpg)$/d' | dmenu -l 15) 
+[ -z $file ] || $EDITOR $file || vim $file || echo "Neither vim or $EDITOR found"
