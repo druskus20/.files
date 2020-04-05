@@ -65,8 +65,8 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#bbc5ff"
-
+    frame_color = "#5c617e"
+    
     # Define a color for the separator.
     # possible values are:
     #  * auto: dunst tries to find a color fitting to the background;
@@ -131,7 +131,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = center
 
     # Vertical alignment of message text and icon.
     # Possible values are "top", "center" and "bottom".
