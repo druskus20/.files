@@ -11,8 +11,11 @@
  #include ".config/xrdb/themes/sourcery"
 ! #include ".config/xrdb/themes/dracula"
 
-! -------------------- XFT ----------------------
- 
+
+! -------------------- XCURSOR ------------------
+Xcursor.theme: cursor-theme
+
+! -------------------- XFT ---------------------- 
 Xft.dpi:       96
 Xft.antialias: true
 Xft.hinting:   true
