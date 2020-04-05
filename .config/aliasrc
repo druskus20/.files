@@ -12,8 +12,6 @@ alias la="ls -a"
 alias cats='highlight -O ansi --force'
 alias rg="ranger"
 alias todo="vim ~/doc/todo.md"
-
-alias vim="vi"
 alias vim="nvim"
 alias diff="colordiff"
 
@@ -26,4 +24,6 @@ alias lh="ls -d -1 .?*"
 
 alias fehs="feh --scale-down --auto-zoom"
 alias zathura="nohup zathura > /dev/null 2> /dev/null" 
+
+
 alias tree="tree -C"
