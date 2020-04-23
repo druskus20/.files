@@ -87,4 +87,3 @@ setopt SHARE_HISTORY
 
 setopt ALWAYS_TO_END
 
-source /home/druskus/.config/broot/launcher/bash/br
