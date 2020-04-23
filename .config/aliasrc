@@ -27,3 +27,6 @@ alias zathura="nohup zathura > /dev/null 2> /dev/null"
 
 
 alias tree="tree -C"
+
+alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
+alias wget="wget --hsts-file="$XDG_CACHE_HOME"/wget-hsts"
