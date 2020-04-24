@@ -1,0 +1,7 @@
+#!/bin/sh
+# https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.local/bin/dmenupass
+
+# This script is the SUDO_ASKPASS variable, meaning that it will be used as a
+# password prompt if needed.
+
+dmenu -fn Monospace-18 -p "$1" <&- && echo
