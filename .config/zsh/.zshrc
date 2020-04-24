@@ -65,7 +65,6 @@ source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-
 setopt AUTO_LIST               # automatically list choices on ambiguous completion
 setopt AUTO_MENU               # show completion menu on a successive tab press
 setopt AUTO_PARAM_SLASH        # if completed parameter is a directory, add a trailing slash

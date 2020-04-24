@@ -1,5 +1,8 @@
 # xinitrc (sourced by /etc/lightdm/XSession
 
+# Fix dual boot time issue
+sudo timedatectl set-ntp true
+
 # Start some programs
 picom -b > /dev/null 2> /dev/null &
 #conky --pause=5 -q
@@ -17,3 +20,4 @@ sxhkd &
 
 # Speed up keyboard input
 xset r rate 300 50 &	
+

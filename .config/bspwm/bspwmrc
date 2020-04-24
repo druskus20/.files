@@ -41,10 +41,8 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 bspc config external_rules_command ~/.config/bspwm/bspwm-colorsrc
+# bspc config external_rules_command ~/.config/bspwm/2border
 
-
-
-
-
+## Custom Rules ## 
 bspc rule -a Matplotlib state=floating
 bspc rule -a Zathura state=tiled

@@ -30,3 +30,9 @@ alias tree="tree -C"
 
 alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
 alias wget="wget --hsts-file="$XDG_CACHE_HOME"/wget-hsts"
+
+# Black magic
+alias sudo='sudo '
+alias visudo="EDITOR=nvim visudo"
+
+alias rm='echo "Fuck you"' 

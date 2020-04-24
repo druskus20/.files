@@ -8,7 +8,7 @@
 
 
 ! Include a color squeme
- #include ".config/xrdb/themes/sourcery"
+#include ".config/xrdb/themes/sourcery"
 ! #include ".config/xrdb/themes/dracula"
 
 
@@ -30,10 +30,10 @@ URxvt.font: xft:DejaVuSansMono Nerd Font:pixelsize=14
 ! URxvt.font: xft:DejaVuSansMono Nerd Font:pixelsize=14
 URxvt*scrollBar:                  false
 ! Might produce some error with vim idk yet
-URxvt*mouseWheelScrollPage:       true 
-URxvt*cursorBlink:                true
-URxvt*saveLines:                  5000
-URxvt*internalBorder:               20 
+URxvt.mouseWheelScrollPage:       true 
+URxvt.cursorBlink:                true
+URxvt.saveLines:                  5000
+URxvt.internalBorder:               20 
 
 ! Makes some keybinding work
 URxvt.iso14755: 		  false
