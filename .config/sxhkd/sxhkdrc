@@ -33,9 +33,9 @@ alt + control + r
 alt + shift + q
 	bspc node -c
 
-# alternate between the tiled and monocle layout
-# alt + f
-#	bspc desktop -l next
+alternate between the tiled and monocle layout
+alt + f
+	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
 # alt + y

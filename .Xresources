@@ -9,8 +9,6 @@
 
 ! Include a color squeme
 #include ".config/xrdb/themes/sourcery"
-! #include ".config/xrdb/themes/dracula"
-
 
 ! -------------------- XCURSOR ------------------
 Xcursor.theme: cursor-theme
@@ -25,7 +23,6 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
  
 ! -------------------- URXVT --------------------
-
 URxvt.font: xft:DejaVuSansMono Nerd Font:pixelsize=14
 ! URxvt.font: xft:DejaVuSansMono Nerd Font:pixelsize=14
 URxvt*scrollBar:                  false

@@ -6,7 +6,7 @@
 case "$(echo -e "Lock\nLogout\nSuspend\nShutdown\nReboot" | dmenu \
     -i -p \
     "Power:" -l 5)" in
-        Lock) exec betterlockscreen -l;;
+        Lock) exec betterlockscreen -l blur;;
         Logout) exec bspc quit;;
         Suspend) exec systemctl suspend;;
         Shutdown) exec systemctl poweroff;;
