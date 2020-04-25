@@ -19,9 +19,6 @@ export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
 #export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
-
-
-
 ## Newer stuff
 export IPYTHONDIR="$XDG_CONFIG_HOME"/ipython
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
@@ -35,8 +32,14 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 # Fails with LightDM
 # export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
+
+export SUDO_ASKPASS="$HOME/.local/bin/scripts/dpass"
+
+
 # Utilities
 export EDITOR=/usr/bin/nvim
-export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/qutebrowser
 export TERMINAL=/usr/bin/terminal-daemon
 export PATH="$PATH:$HOME/.local/bin/scripts"
+
+
