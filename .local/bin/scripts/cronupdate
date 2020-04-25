@@ -1,14 +1,17 @@
 #!/bin/sh
 # A script for checking new yay updates
-# WIP
+
+# Requires sudo permisions to run tho
 
 ping -q -c 1 1.1.1.1 > /dev/null || exit
 
 notify-send "📦 Repository Sync" "Checking for package updates..."
 
-sudo yay -Sy || notify-send "Error checking for updates"
+# Hardcoded !!!
+sudo /home/druskus/.local/bin/scripts/yayfix || notify-send "Error checking for updates" 
 
 nupdates=$(yay -Qu | wc -l)
+
 if [ $nupdates -eq 0 ];
 then
 	notify-send "📦 No updates found"

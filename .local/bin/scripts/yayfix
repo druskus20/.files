@@ -1,0 +1,7 @@
+#!/bin/sh
+# This shitty script is a workaround to be able to run
+#  yay -Sy in cronupdate without having full yay root
+#  permissions while displaying notifications for the user 
+
+
+yay -Sy
