@@ -3,8 +3,7 @@
 
 # Colored utilities
 alias ls='ls --color=auto'
-alias grep='grep --colour=auto'
-alias egrep='egrep --colour=auto'
+alias grep='grep --colour=auto' alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
 alias open="xdg-open"
@@ -36,3 +35,5 @@ alias sudo='sudo '
 alias visudo="EDITOR=nvim visudo"
 
 alias rm='echo "Fuck you"' 
+
+alias svn="svn --config-dir "$XDG_CONFIG_HOME"/subversion"

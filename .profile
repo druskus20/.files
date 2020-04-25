@@ -25,10 +25,12 @@ export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 ## Newer stuff
 export IPYTHONDIR="$XDG_CONFIG_HOME"/ipython
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
-# export MONO_CONFIG="$XDG_CONFIG_HOME"/mono/
+export MONO_CONFIG="$XDG_CONFIG_HOME"/mono/
 export XMONAD_CONFIG_HOME="$XDG_CONFIG_HOME"/xmonad
 export XMONAD_DATA_HOME="$XDG_DATA_HOME"/xmonad
 export XMONAD_CACHE_HOME="$XDG_CACHE_HOME"/xmonad
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+
 
 # Fails with LightDM
 # export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
