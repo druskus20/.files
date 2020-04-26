@@ -46,8 +46,16 @@ Dmenu.selbackground: 	#bbc5ff
 Dmenu.selforeground: 	#282a36
 
 !!! BSPWM !!!
-
 Bspwm.normal_border_color:   #5c617e
 Bspwm.active_border_color:   #bbc5ff
 Bspwm.focused_border_color:  #bbc5ff
 Bspwm.presel_feedback_color: #282a36
+
+!!! ZATHURA !!!
+Zathura.background: 	#282a36
+Zathura.foreground: 	#bbc5ff
+Zathura.color1: 	#FF0000
+Zathura.color2: 	#000FFF
+Zathura.defaultbg: 	#282a36
+
+
