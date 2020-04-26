@@ -1,0 +1,7 @@
+#!/bin/sh
+
+xrdb -merge "$HOME"/.Xresources
+[ -f "$HOME"/.config/zathura/genzathurarc.sh ] && "$HOME"/.config/zathura/genzathurarc.sh > "$HOME"/.config/zathura/zathurarc
+
+
+notify-send "Xresources settings have been reloaded"

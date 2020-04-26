@@ -3,5 +3,4 @@
 #  yay -Sy in cronupdate without having full yay root
 #  permissions while displaying notifications for the user 
 
-
 yay -Sy
