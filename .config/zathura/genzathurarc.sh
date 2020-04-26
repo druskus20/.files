@@ -25,9 +25,7 @@ set completion-highlight-fg "$background"
 set recolor-lightcolor "$background"
 set recolor-darkcolor "$foreground"
 
-
 set default-bg "$defaultbg"
-
 
 set inputbar-bg "$background"
 set inputbar-fg "$foreground"

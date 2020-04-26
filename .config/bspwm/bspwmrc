@@ -46,3 +46,7 @@ bspc config external_rules_command ~/.config/bspwm/bspwm-colorsrc
 ## Custom Rules ## 
 bspc rule -a Matplotlib state=floating
 bspc rule -a Zathura state=tiled
+
+
+
+rm ~/.xsession-errors*
