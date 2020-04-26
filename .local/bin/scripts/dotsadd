@@ -1,0 +1,5 @@
+#!/bin/sh
+# Automatically adds new files to the dotfiles repository
+
+dots add ~/.local/bin/scripts || notify-send "Couldnt access scripts directory"
+dots add ~/img/bg || notify-send "Couldnt access backgrounds directory"
