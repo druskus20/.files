@@ -1,0 +1,2 @@
+#!/bin/sh
+  HOME="$XDG_CONFIG_HOME/firefox" /usr/bin/real-firefox "$@"
