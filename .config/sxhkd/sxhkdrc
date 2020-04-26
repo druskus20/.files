@@ -11,7 +11,7 @@ set -U SXHKD_SHELL sh
 
 # terminal emulator
 alt + Return
-	urxvt
+	tdaemon || urxvt
 
 # program launcher
 alt + d
