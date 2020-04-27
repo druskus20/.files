@@ -12,7 +12,7 @@ sudo /home/druskus/.local/bin/scripts/yayfix || notify-send "Error checking for 
 
 nupdates=$(yay -Qu | wc -l)
 
-if [ $nupdates -eq 0 ];
+if [ "$nupdates" -eq 0 ];
 then
 	notify-send "📦 No updates found"
 else 

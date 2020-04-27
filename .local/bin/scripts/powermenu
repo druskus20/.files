@@ -1,9 +1,9 @@
 #!/bin/sh
 # Creates a power menu with dmenu
 
-[ $(id -u) -eq 0 ] && echo "Do not run this as root" && exit
+[ "$(id -u)" -eq 0 ] && echo "Do not run this as root" && exit
 
-case "$(echo "Lock\nLogout\nSuspend\nShutdown\nReboot" | dmenu \
+case "$(printf "Lock\nLogout\nSuspend\nShutdown\nReboot" | dmenu \
     -i -p \
     "Power:" -l 5)" in
         Lock) exec betterlockscreen -l blur;;

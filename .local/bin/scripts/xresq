@@ -1,7 +1,7 @@
 #!/bin/sh
 # Queries for the Xresources values given a resource name and a class 
 
-[ -z $1 ] || [ -z $2 ] && exit
+[ -z "$1" ] || [ -z "$2" ] && exit
 
 x="$(xrdb -query | grep -E "^(\*|$2)\.$1")"
 echo "${x##*:?}"
