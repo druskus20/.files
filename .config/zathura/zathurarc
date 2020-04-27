@@ -2,7 +2,7 @@
 
 set window-title-home-tilde true
 set selection-clipboard clipboard
-set recolor "true"
+#set recolor "true"
 
 set completion-bg "#bbc5ff"
 set completion-fg "#282a36"
