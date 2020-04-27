@@ -3,8 +3,7 @@
 *.background:   #282a36
 *.cursorColor:  #bbc5ff
 
-! black
-*.color0:       #282a36
+! black *.color0:       #282a36
 *.color8:       #434758
 
 ! red
@@ -37,7 +36,8 @@
 
 
 !!! POLYBAR !!!
-Polybar.foreground: 	#282a36
+Polybar.foreground: 		#282a36
+Polybar.foreground-alt: 	#bbc5ff 
 
 !!! DMENU !!!
 Dmenu.background:	    #282a36

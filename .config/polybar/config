@@ -21,6 +21,7 @@ margin-bottom =
 
 [colors]
 foreground  = ${xrdb:Polybar.foreground}
+foreground-alt = ${xrdb:Polybar.foreground-alt}
 background  = ${xrdb:Polybar.background}
 black       = ${xrdb:Polybar.color0}
 red         = ${xrdb:Polybar.color1}
@@ -102,8 +103,8 @@ border-bottom-size = 0
 
 ### Modules ###
 fixed-center   = true
-modules-left   = bspwm arrow2
-modules-center =
+modules-left   = bspwm arrow2 cmus
+modules-center = 
 modules-right  = arrow-red1 alsa arrow-green temperature arrow-yellow cpu arrow-blue memory arrow-cyan eth arrow-magenta date arrow-red2 time 
 
 

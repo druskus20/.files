@@ -13,9 +13,7 @@ set completion-highlight-fg "#bbc5ff"
 set recolor-lightcolor "#bbc5ff"
 set recolor-darkcolor "#282a36"
 
-
-set default-bg "#000000"
-
+set default-bg "#282a36"
 
 set inputbar-bg "#bbc5ff"
 set inputbar-fg "#282a36"
