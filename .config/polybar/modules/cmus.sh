@@ -7,7 +7,7 @@ prepend_zero () {
 
 status=$(cmus-remote -C status)
 [ -z "$status" ] && exit 
-[ "$(echo "$status" | sed -n 1p)" = "status stopped" ] && echo " " && exit
+[ "$(echo "$status" | sed -n 1p)" = "status stopped" ] && echo "Not playing" && exit
 
 artist=$(echo "$status" | grep artist -m 1| cut -c 12-)
 song=$(echo "$status" | grep title | cut -c 11-)
