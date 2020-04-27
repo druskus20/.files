@@ -27,7 +27,7 @@ alt + control + q
 
 # restart bspwm
 alt + control + r
-	bspc wm -r
+	"$HOME"/.config/bspwm/bspwm-reload
 
 # close
 alt + shift + q

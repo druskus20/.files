@@ -21,3 +21,5 @@ sxhkd &
 # Speed up keyboard input
 xset r rate 300 50 &	
 
+setxkbmap -option caps:escape
+
