@@ -39,7 +39,7 @@ export SUDO_ASKPASS="$HOME/.local/bin/scripts/dpass"
 # Utilities
 export EDITOR=/usr/bin/nvim
 export BROWSER=/usr/bin/qutebrowser
-export TERMINAL=/usr/bin/terminal-daemon
-export PATH="$PATH:$HOME/.local/bin/scripts"
+export TERMINAL="$HOME"/.local/bin/scripts/tdaemon
+export PATH="$PATH:$HOME"/.local/bin/scripts
 
 
