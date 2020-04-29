@@ -1,9 +1,15 @@
-# My personal dotfiles 
+# dotfiles •••
 
 ![](git-images/1588125301.png)
 ![](git-images/1588124939.png)
 
 ### FAQ
+#### What the fuck is a dotfile?
+If you have ever used linux, you probably would have seen those hidden files that start with a ".". Well, thats why they are called dotfiles. Those files are sometimes configuration files.
+
+#### Why do you store your dotfiles here?
+I want to have a version control so I can always undo changes if something doesnt work. Also, its always useful to have any kind of backup, just in case.
+
 #### How do you manage your dotfiles?
 I use a git bare repository, you can see how looking at my .local/bin/dots script
 
