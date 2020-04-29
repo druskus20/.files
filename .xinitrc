@@ -4,7 +4,7 @@
 sudo timedatectl set-ntp true
 
 # Start some programs
-picom -b > /dev/null 2> /dev/null &
+picom -b --config "~/.config/picom/picom.conf" > /dev/null 2> /dev/null &
 #conky --pause=5 -q
 setbg /home/druskus/img/bg/fish.jpg &
 # cat .cache/background | xargs betterlockscreen -u &  

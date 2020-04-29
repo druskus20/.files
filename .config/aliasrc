@@ -34,16 +34,13 @@ alias wget="wget --hsts-file="$XDG_CACHE_HOME"/wget-hsts"
 alias sudo='sudo '
 alias visudo="EDITOR=nvim visudo"
 
-alias rm='echo "Fuck you:"' 
 
 alias svn="svn --config-dir "$XDG_CONFIG_HOME"/subversion"
-
-
+alias picom="picom --config $PICOM_CONFIG_PATH"
 
 # Temp
 alias chromium="qutebrowser"
-
-
+alias rm='echo "Fuck you:"' 
 
 
 # Exclude README from git pull / push

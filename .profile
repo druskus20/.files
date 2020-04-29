@@ -28,7 +28,7 @@ export XMONAD_DATA_HOME="$XDG_DATA_HOME"/xmonad
 export XMONAD_CACHE_HOME="$XDG_CACHE_HOME"/xmonad
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint
-
+export PICOM_CONFIG_PATH="$XDG_CONFIG_HOME"/picom/picom.conf
 # Fails with LightDM
 # export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
