@@ -1,6 +1,8 @@
 #!/bin/sh
 # Recommended use: "dots commit -a" to only add tracked files
 
+## How to remove README.md from ~
+## dots update-index --assume-unchanged "$HOME/README.md"
 
 # Made as a script for zsh completion (hacky)
 /usr/bin/git --git-dir="$HOME"/.dots/ --work-tree="$HOME" "$@"
