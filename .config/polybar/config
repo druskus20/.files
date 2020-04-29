@@ -6,9 +6,7 @@
 #   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
 #   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 #
-#
-
-[section/base]
+# [section/base]
 include-file = ~/.config/polybar/modules.config
 
 ######################## 
@@ -105,6 +103,6 @@ border-bottom-size = 0
 fixed-center   = true 
 modules-left   = bspwm arrow2 cmus spotify
 modules-center = 
-modules-right  = arrow-end updates-arch-aur arrow-magenta system-nvidia-smi arrow-red alsa arrow-green temperature arrow-yellow cpu arrow-blue memory arrow-cyan eth arrow-magenta date arrow-red time 
+modules-right  = arrow-end filesystem arrow-cyan updates-arch-aur arrow-magenta system-nvidia-smi arrow-red alsa arrow-green temperature arrow-yellow cpu arrow-blue memory arrow-cyan eth arrow-magenta date arrow-red time 
 
 
