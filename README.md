@@ -1,7 +1,7 @@
 # My personal dotfiles 
 
-![](git-images/1588124939.png)
 ![](git-images/1588125301.png)
+![](git-images/1588124939.png)
 
 ### FAQ
 #### How do you manage your dotfiles?
