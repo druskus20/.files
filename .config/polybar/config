@@ -103,7 +103,7 @@ border-bottom-size = 0
 
 ### Modules ###
 fixed-center   = true 
-modules-left   = bspwm arrow2 cmus
+modules-left   = bspwm arrow2 cmus spotify
 modules-center = 
 modules-right  = arrow-end updates-arch-aur arrow-magenta system-nvidia-smi arrow-red alsa arrow-green temperature arrow-yellow cpu arrow-blue memory arrow-cyan eth arrow-magenta date arrow-red time 
 
