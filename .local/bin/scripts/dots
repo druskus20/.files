@@ -3,7 +3,7 @@
 
 
 # Made as a script for zsh completion (hacky)
-/usr/bin/git --git-dir="$HOME"/.dots/ --work-tree="$HOME" dots update-index --assume-unchanged "$HOME/README.md"
+/usr/bin/git --git-dir="$HOME"/.dots/ --work-tree="$HOME" update-index --assume-unchanged "$HOME/README.md"
 
 /usr/bin/git --git-dir="$HOME"/.dots/ --work-tree="$HOME" "$@"
 
