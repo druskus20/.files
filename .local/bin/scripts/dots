@@ -6,3 +6,6 @@
 
 /usr/bin/git --git-dir="$HOME"/.config/.dots/ --work-tree="$HOME" "$@"
 
+# Removes README if present
+[ -f "$HOME"/README.md ] && /usr/bin/git --git-dir="$HOME"/.config/.dots/ --work-tree="$HOME" update-index --assume-unchanged "$HOME"/README.md && rm "$HOME"/README.md
+
