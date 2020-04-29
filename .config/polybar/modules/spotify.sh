@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pgrep -x spotify >/dev/null || ( echo "" && exit )
+pgrep -x spotify > /dev/null || ( echo "" && exit )
 domain="org.mpris.MediaPlayer2"
 
 meta=$(dbus-send --print-reply --dest=${domain}.spotify \
