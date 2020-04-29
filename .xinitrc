@@ -24,3 +24,5 @@ xset r rate 300 50 &
 # Remap escape to capslock
 setxkbmap -option caps:escape
 
+# Set default cursor (so it's not an X while hovering over background)
+xsetroot -cursor_name left_ptr
