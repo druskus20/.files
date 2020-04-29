@@ -18,6 +18,6 @@ I figured out a workaround by running the following command:
 ```git update-index --assume-unchanged "$HOME/README.md"```
 That of course will not work if README.md is updated from the remote. Thats why I check if there is a README.md in my home folder and delete it. (see .local/bin/scripts/dots)
 
-#### More Images
+## More Images
 ![](git-images/1588126735.png)
 
