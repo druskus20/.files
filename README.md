@@ -1,5 +1,8 @@
 # My personal dotfiles 
 
+![](git-images/1588124939.png)
+![](git-images/1588125301.png)
+
 ### FAQ
 #### How do you manage your dotfiles?
 I use a git bare repository, you can see how looking at my .local/bin/dots script
