@@ -1,0 +1,2 @@
+#!/bin/sh
+  HOME="$XDG_CONFIG_HOME/code" /usr/bin/real-code "$@"
