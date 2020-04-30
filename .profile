@@ -35,7 +35,6 @@ export PICOM_CONFIG_PATH="$XDG_CONFIG_HOME"/picom/picom.conf
 
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dpass"
 
-
 # Utilities
 export EDITOR=/usr/bin/nvim
 export BROWSER=/usr/bin/qutebrowser

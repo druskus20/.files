@@ -42,8 +42,8 @@ Polybar.foreground-alt: 	#bbc5ff
 !!! DMENU !!!
 Dmenu.background:	    #282a36
 Dmenu.foreground:	    #bbc5ff
-Dmenu.selbackground: 	#bbc5ff
-Dmenu.selforeground: 	#282a36
+Dmenu.selbackground: 	    #bbc5ff
+Dmenu.selforeground: 	    #282a36
 
 !!! BSPWM !!!
 Bspwm.normal_border_color:   #5c617e
