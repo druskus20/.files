@@ -8,7 +8,7 @@ ping -q -c 1 1.1.1.1 > /dev/null || exit
 notify-send "📦 Repository Sync" "Checking for package updates..."
 
 # Hardcoded !!!
-sudo /home/druskus/.local/bin/scripts/yayfix || notify-send "Error checking for updates" 
+sudo "$HOME"/.local/bin/scripts/yaysync || notify-send "Error checking for updates" 
 
 nupdates=$(yay -Qu | wc -l)
 
