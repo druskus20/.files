@@ -8,11 +8,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall
 endif
 
-if !1 | finish | endif
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-  call plug#begin()
-endif
-
-" Load vim-plug
+call plug#begin()
 Plug 'bling/vim-airline'
+
+call plug#end()

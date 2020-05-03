@@ -20,6 +20,3 @@ source $XDG_CONFIG_HOME/nvim/keys.vim
 source $XDG_CONFIG_HOME/nvim/line.vim
 
 
-
-
-

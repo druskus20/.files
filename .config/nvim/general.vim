@@ -7,7 +7,6 @@ set clipboard=unnamedplus
 set relativenumber                    
 set number                
 
-
 syntax enable
 
 " Tab size
@@ -21,7 +20,7 @@ set lazyredraw      " Redraw only if needed
 
 set showmatch       " Highlight [{()}]
 
-
+set nocompatible    " Be iMproved
 
 set hlsearch
 set incsearch    
