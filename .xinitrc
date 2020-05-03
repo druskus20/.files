@@ -1,7 +1,7 @@
 # xinitrc (sourced by /etc/lightdm/XSession
 
 # Fix dual boot time issue
-sudo timedatectl set-ntp true
+# sudo timedatectl set-ntp true
 
 # Start some programs
 picom -b --config ~/.config/picom/picom.conf > /dev/null 2> /dev/null &
