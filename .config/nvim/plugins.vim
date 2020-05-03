@@ -10,5 +10,5 @@ endif
 
 call plug#begin()
 Plug 'bling/vim-airline'
-
+" Plug 'mhinz/vim-startify'
 call plug#end()
