@@ -17,7 +17,7 @@ alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
 alias rm="rm -i"
 
 # Shows only hidden files (only on current directory)
-alias lh="ls -d -1 .?*"
+alias lh="ls -d -A .?*"
 
 alias fehs="feh --scale-down --auto-zoom"
 alias zathura="nohup zathura > /dev/null 2> /dev/null" 
