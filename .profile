@@ -15,7 +15,7 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export LESSKEY="$XDG_CONFIG_HOME/less/lesskey"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
-export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
+export VIMINIT=":source $XDG_CONFIG_HOME/nvim/init.vim"
 #export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
