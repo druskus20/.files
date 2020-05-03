@@ -8,7 +8,7 @@
 
 
 ! Include a color squeme
-#include ".config/xrdb/themes/sourcery"
+#include "themes/sourcery"
 
 ! -------------------- XCURSOR ------------------
 Xcursor.theme: cursor-theme

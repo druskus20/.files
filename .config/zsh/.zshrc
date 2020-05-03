@@ -40,8 +40,8 @@ bindkey "^[[1;5D" backward-word
 export ZSH_HIGHLIGHT_MAXLENGTH=100
 
 # Load aliases and shortcuts if existent.
-[ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
-[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+[ -f "$HOME/.config/zsh/shortcutrc" ] && source "$HOME/.config/zsh/shortcutrc"
+[ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
 
 # Man pages color support
 export LESS_TERMCAP_mb=$'\e[1;32m'
