@@ -4,7 +4,7 @@
 #  _ / /\__ \ | | | | | (__ 
 # (_)___|___/_| |_|_|  \___|
 #                           
-#  By Druskus
+#  By Druskus               
 #
 
 # Enable colors and change prompt:
