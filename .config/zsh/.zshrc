@@ -34,7 +34,14 @@ export KEYTIMEOUT=1
 # Keybindings 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
-
+#bindkey '\e[2~'   overwrite-mode          # Insert
+bindkey '\e[3~'   delete-char             # Del
+bindkey '\e[5~'   history-search-backward # PgUp
+bindkey '\e[6~'   history-search-forward  # PgDn
+#bindkey '^A'      beginning-of-line       # Home
+#bindkey '^D'      delete-char             # Del
+#bindkey '^E'      end-of-line             # End
+#bindkey '^R'      history-incremental-pattern-search-backward 
 
 # Zsh syntax hightlighting fix
 export ZSH_HIGHLIGHT_MAXLENGTH=100
@@ -75,14 +82,13 @@ setopt HIST_VERIFY             # if a command triggers history expansion, show i
 setopt INTERACTIVE_COMMENTS    # allow comments in command line
 setopt NO_BANG_HIST            # disable old history syntax
 setopt PATH_DIRS               # perform path search even on command names with slashes
-# setopt SHARE_HISTORY           # write and import history on every command
+setopt SHARE_HISTORY           # write and import history on every command
 setopt C_BASES                 # print hex/oct numbers as 0xFF/077 instead of 16#FF/8#77
 
 unsetopt MENU_COMPLETE        # do not autoselect the first completion entry
-setopt AUTO_MENU              # show completion menu on successive tab press
 
 setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY	 
 
+setopt HASH_LIST_ALL
 setopt ALWAYS_TO_END
 
