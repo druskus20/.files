@@ -13,10 +13,20 @@ set -U SXHKD_SHELL sh
 alt + Return
 	tdaemon || urxvt
 
+# alacritty
+#alt + p
+#        hterm
+
+
+
+
 # program launcher
 alt + d
 	dlaunch
 
+# Reload sxhkd
+super + Escape
+    pkill -USR1 -x sxhkd
 #
 # bspwm hotkeys
 #
@@ -30,10 +40,10 @@ alt + control + r
 	"$HOME"/.config/bspwm/bspwm-reload
 
 # close
-alt + shift + q
+alt + shift  q
 	bspc node -c
 
-alternate between the tiled and monocle layout
+# alternate between the tiled and monocle layout
 alt + f
 	bspc desktop -l next
 
@@ -122,6 +132,4 @@ ctrl + shift + {h,j,k,l}
 # # move a floating window
 # alt + {Left,Down,Up,Right}
 # 	gspc node -v {-20 0,0 20,0 -20,20 0}
-# 
-
-
+# +

@@ -33,6 +33,7 @@ export PICOM_CONFIG_PATH="$XDG_CONFIG_HOME"/picom/picom.conf
 # export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 
+
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dpass"
 
 # Utilities

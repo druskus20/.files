@@ -43,3 +43,6 @@ alias rm='echo "Fuck you:"'
 
 # Exclude README from git pull / push
 alias tomato='potato'
+
+
+alias shutup='shutdown'

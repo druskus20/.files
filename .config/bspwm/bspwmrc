@@ -22,7 +22,7 @@ bspc rule -r "*"
 #	xrandr --output "$mainmonitor" --auto --output LVDS1 --off
 #fi
 
-bspc monitor -d 1 2 3 4 5 6 7 8 9
+bspc monitor -d 1 2 3 4 5 6 7 8 9 
 #bspc desktop -f 1
 
 bspc config border_width 2
@@ -47,6 +47,8 @@ bspc config external_rules_command ~/.config/bspwm/bspwm-colorsrc
 bspc rule -a Matplotlib state=floating
 bspc rule -a Zathura state=tiled
 
+# For hterm script
+bspc rule -a hterm_terminal hidden=on
 
 
-rm ~/.xsession-errors*
+rm ~/.xsession-errors* 

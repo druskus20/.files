@@ -46,10 +46,6 @@ bindkey '\e[6~'   history-search-forward  # PgDn
 # Zsh syntax hightlighting fix
 export ZSH_HIGHLIGHT_MAXLENGTH=100
 
-# Load aliases and shortcuts if existent.
-[ -f "$HOME/.config/zsh/shortcutrc" ] && source "$HOME/.config/zsh/shortcutrc"
-[ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
-
 # Man pages color support
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
@@ -58,6 +54,10 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+# Load aliases and shortcuts if existent.
+[ -f "$HOME/.config/zsh/shortcutrc" ] && source "$HOME/.config/zsh/shortcutrc"
+[ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
 
 # Other rc
 unsetopt flow_control    # Disable Ctrl+S and Ctrl+Q (in zsh)
@@ -92,3 +92,11 @@ setopt INC_APPEND_HISTORY
 setopt HASH_LIST_ALL
 setopt ALWAYS_TO_END
 
+##
+# 1) If i delete (dd) above line 74 where the setopts are, vim redraws the line and Im guessing that it searches for the variable name in the environment
+# Thats slow
+#
+# 2) If i delete below the line, its fast because vim doesnt have to redraw the line
+# 3) Once the setopts are removed, everything works fine
+#
+# WTF
