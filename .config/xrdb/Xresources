@@ -30,7 +30,7 @@ URxvt*scrollBar:                  false
 URxvt.mouseWheelScrollPage:       true 
 URxvt.cursorBlink:                true
 URxvt.saveLines:                  5000
-URxvt.internalBorder:               20 
+URxvt.internalBorder:               20
 
 ! Makes some keybinding work
 URxvt.iso14755: 		  false
