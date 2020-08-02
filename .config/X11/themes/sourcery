@@ -54,8 +54,12 @@ Bspwm.presel_feedback_color: #282a36
 !!! ZATHURA !!!
 Zathura.background: 	#282a36
 Zathura.foreground: 	#bbc5ff
-Zathura.color1: 	#FF0000
-Zathura.color2: 	#000FFF
-Zathura.defaultbg: 	#282a36
+Zathura.color1: 	    #FF0000
+Zathura.color2: 	    #000FFF
+Zathura.defaultbg: 	    #282a36
 
+!!! FIREFOX !!!
+Firefox.foreground:     #bbc5ff
+Firefox.background:     #282a36
+Firefox.altbackground:  #323440
 

@@ -3,6 +3,7 @@
 
 xrdb -merge "$XDG_CONFIG_HOME"/X11/Xresources
 
-[ -f "$XDG_CONFIG_HOME"/zathura/genzathurarc.sh ] && "$XDG_CONFIG_HOME"/zathura/genzathurarc.sh > "$HOME"/.config/zathura/zathurarc
+[ -f "$XDG_CONFIG_HOME"/zathura/genzathurarc.sh ] && "$XDG_CONFIG_HOME"/zathura/genzathurarc.sh > "$XDG_CONFIG_HOME"/zathura/zathurarc
+[ -f "$XDG_CONFIG_HOME"/firefox/startpage/gencolors.sh ] && "$XDG_CONFIG_HOME"/firefox/startpage/gencolors.sh 
 
 notify-send "X11 settings have been reloaded"
