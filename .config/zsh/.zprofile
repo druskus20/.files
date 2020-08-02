@@ -39,7 +39,8 @@ export SUDO_ASKPASS="$HOME/.local/bin/scripts/dpass"
 export EDITOR=/usr/bin/nvim
 export BROWSER="$HOME"/.local/bin/scripts/firefox
 export TERMINAL="$HOME"/.local/bin/scripts/tdaemon
-export PATH="$HOME"/.local/bin/scripts:"$PATH"
+export PATH="$HOME"/.local/bin:"$HOME"/.local/bin/scripts:"$PATH"
+
 
 # ! Remember to specify it in the startx command
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
@@ -48,3 +49,6 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+        startx
+fi

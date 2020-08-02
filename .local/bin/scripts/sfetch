@@ -18,14 +18,10 @@ term="$(ps -o comm= -p "$(($(ps -o ppid= -p "$(($(ps -o sid= -p "$$")))")))")"
 
 
 ## WM DETECTION
-if [ -n "${XDG_CURRENT_DESKTOP}" ]; then
-	wm="${XDG_CURRENT_DESKTOP}"
-elif [ -n "${DESKTOP_SESSION}" ]; then
-	wm="${DESKTOP_SESSION}"
-elif [ -f "${HOME}/.xinitrc" ]; then
-	wm="$(tail -n 1 "${HOME}/.xinitrc" | cut -d ' ' -f 2)"
-elif [ -f "${HOME}/.xsession" ]; then
-	wm="$(tail -n 1 "${HOME}/.xsession" | cut -d ' ' -f 2)"
+if [ -f "${HOME}/.xinitrc" ]; then
+	wm="$(tail -n 1 "${HOME}"/.xinitrc | cut -d ' ' -f 2)"
+elif [ -f "${XDG_CONFIG_HOME}"/X11/xinitrc ]; then
+	wm="$(tail -n 1 "${XDG_CONFIG_HOME}"/X11/xinitrc | cut -d ' ' -f 2)"
 else
 	wm='unknown'
 fi

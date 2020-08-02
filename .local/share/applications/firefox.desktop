@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=true
+# Wrapper script
+Exec=/home/druskus/.local/bin/scripts/firefox %u
+Name=Firefox
+Comment=Custom definition for Firefox
