@@ -58,7 +58,7 @@ Zathura.color1: 	    #FF0000
 Zathura.color2: 	    #000FFF
 Zathura.defaultbg: 	    #282a36
 
-!!! FIREFOX !!!
+!!! FIREFOX !!! (and startpage)
 Firefox.foreground:     #bbc5ff
 Firefox.background:     #282a36
 Firefox.altbackground:  #323440

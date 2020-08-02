@@ -1,48 +1,60 @@
 :root {
 
+  /* 
+   * DONT TOUCH 
+   *  This are changed by gencolors.sh 
+   */
+  --background: #282a36;
+  --foreground: #bbc5ff;
+ 
+
+
+
    /* Minimal Functional Fox variables*/
-  --mff-bg: #282a36;
-  --mff-icon-color: #bbc5ff;
-  --mff-nav-toolbar-padding: 8px;
-  --mff-sidebar-bg: var(--mff-bg);
-  --mff-sidebar-color: #bbc5ff;
-  --mff-tab-border-radius: 0px;
-  --mff-tab-color: #bbc5ff;
-  --mff-tab-selected-color: #282a36;
-  --mff-tab-font-family: "Cantarell", sans;
-  --mff-tab-font-size: 11pt;
-  --mff-tab-font-weight: 400; --mff-tab-height: 32px; --mff-tab-pinned-bg: #70c1b3;
+  --mff-bg: var(--background);
+  --mff-tab-selected-color: var(--background);
+  --mff-sidebar-bg: var(--background);
+  --mff-icon-color: var(--foreground);
+  --mff-sidebar-color: var(--foreground);
+  --mff-urlbar-focused-color: var(--foreground);
+  --mff-urlbar-results-color: var(--foreground);
+  --mff-urlbar-results-url-color: var(--foreground);
+  --mff-urlbar-color: var(--foreground);
+  --mff-tab-color: var(--foreground);
+  
+  --mff-tab-pinned-bg: #70c1b3;
   --mff-tab-selected-bg: #c3e88d;
   --mff-tab-soundplaying-bg: #9c89b8;
-  --mff-urlbar-color: #bbc5ff;
-  --mff-urlbar-focused-color: #bbc5ff;
-  --mff-urlbar-font-family: "Cantarell", serif;
+
+  --mff-tab-font-weight: 400; 
+  --mff-tab-height: 32px; 
+  --mff-nav-toolbar-padding: 8px;
+  --mff-tab-border-radius: 0px;
+  --mff-tab-font-size: 11pt;
   --mff-urlbar-font-size: 12pt;
   --mff-urlbar-font-weight: 700;
-  --mff-urlbar-results-color: #bbc5ff;
-  --mff-urlbar-results-font-family: "mononoki Nerd Font", serif;
   --mff-urlbar-results-font-size: 12pt;
   --mff-urlbar-results-font-weight: 700;
-  --mff-urlbar-results-url-color: #bbc5ff;
+
+  --mff-urlbar-results-font-family: "Noto Sans Nerd Font", sans;
+  --mff-urlbar-font-family: "Noto Sans Nerd Font", sans;
+  --mff-tab-font-family: "Noto Sans Nerd Font", sans;
+  
   /*   --mff-tab-selected-bg: linear-gradient(90deg, rgba(232,74,95,1) 0%, rgba(255,132,124,1) 50%, rgba(254,206,168,1) 100%); */
   /*   --mff-urlbar-font-weight: 600; */
 
   /* Overriden Firefox variables*/
+  --panel-disabled-color: #f9f9fa80;
+  --default-arrowpanel-color: #fefefa !important;
+
   --autocomplete-popup-background: var(--mff-bg) !important;
   --default-arrowpanel-background: var(--mff-bg) !important;
-  --default-arrowpanel-color: #fefefa !important;
   --lwt-toolbarbutton-icon-fill: var(--mff-icon-color) !important;
-  --panel-disabled-color: #f9f9fa80;
   --toolbar-bgcolor: var(--mff-bg) !important;
   --urlbar-separator-color: transparent !important;
 }
 
-/*
-  _____ _   ___ ___
- |_   _/_\ | _ ) __|
-   | |/ _ \| _ \__ \
-   |_/_/ \_\___/___/
-*/
+/* !!! TABS !!! */
 
 .tab-background[selected="true"] {
   background: var(--mff-tab-selected-bg) !important;
@@ -152,12 +164,7 @@ width: 50% !important;
   display: none !important;
 }
 
-/*
-  _____ ___   ___  _    ___   _   ___
-|_   _/ _ \ / _ \| |  | _ ) /_\ | _ \
-  | || (_) | (_) | |__| _ \/ _ \|   /
-  |_| \___/ \___/|____|___/_/  \_\_|_\
-*/
+/* !!! TOOLBAR !!! */
 
 .urlbar-icon > image {
   fill: var(--mff-icon-color) !important;
@@ -302,12 +309,7 @@ toolbarbutton {
 }
 
 
-/*
-  ___ ___ ___  ___ ___   _   ___
- / __|_ _|   \| __| _ ) /_\ | _ \
- \__ \| || |) | _|| _ \/ _ \|   /
- |___/___|___/|___|___/_/ \_\_|_\
-*/
+/* !!! SIDEBAR !!! */
 
 .close-icon, .urlbar-icon {
   fill: var(--mff-icon-color) !important;
@@ -339,12 +341,7 @@ image#sidebar-icon {
 }
 
 
-/*
-    _   ___ ___  _____      _____  _   _  _ ___ _
-   /_\ | _ \ _ \/ _ \ \    / / _ \/_\ | \| | __| |
-  / _ \|   /   / (_) \ \/\/ /|  _/ _ \| .` | _|| |__
- /_/ \_\_|_\_|_\\___/ \_/\_/ |_|/_/ \_\_|\_|___|____|
- */
+/* !!! ARROW PANEL !!! */
 
 .panel-arrowcontent {
   padding: 0px !important;
