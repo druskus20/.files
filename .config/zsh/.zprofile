@@ -12,11 +12,12 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # Move some config files
 export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" 
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+
 export LESSKEY="$XDG_CONFIG_HOME/less/lesskey"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 export VIMINIT=":source $XDG_CONFIG_HOME/nvim/init.vim"
-#export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
 ## Newer stuff
@@ -29,17 +30,21 @@ export XMONAD_CACHE_HOME="$XDG_CACHE_HOME"/xmonad
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 export PICOM_CONFIG_PATH="$XDG_CONFIG_HOME"/picom/picom.conf
-# Fails with LightDM
-# export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
-
+export STACK_ROOT="$XDG_DATA_HOME"/stack
 
 export SUDO_ASKPASS="$HOME/.local/bin/scripts/dpass"
 
 # Utilities
 export EDITOR=/usr/bin/nvim
-export BROWSER=/usr/bin/qutebrowser
+export BROWSER="$HOME"/.local/bin/scripts/firefox
 export TERMINAL="$HOME"/.local/bin/scripts/tdaemon
-export PATH="$PATH:$HOME"/.local/bin/scripts
+export PATH="$HOME"/.local/bin/scripts:"$PATH"
+
+# ! Remember to specify it in the startx command
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+
+# Fails with LightDM
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 

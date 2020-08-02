@@ -11,7 +11,7 @@ set -U SXHKD_SHELL sh
 
 # terminal emulator
 alt + Return
-	tdaemon || alacritty
+	tdaemon || urxvt
 
 # alacritty
 #alt + p

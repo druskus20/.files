@@ -63,6 +63,19 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 unsetopt flow_control    # Disable Ctrl+S and Ctrl+Q (in zsh)
 
 
+
+
+
+fzf-history-widget-accept() {
+  fzf-history-widget
+  zle accept-line
+}
+zle     -N     fzf-history-widget-accept
+bindkey '^X^R' fzf-history-widget-accept
+
+
+
+
 # Load plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null

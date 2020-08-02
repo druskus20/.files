@@ -8,11 +8,11 @@
 : ${TWITCH_STREAM_FILE:=~/.local/share/scripts/twitch/channels.txt}
 : ${MENU_PROG:=dmenu -l 10}
 : ${MPV_OPTS:=--really-quiet}
-
 log=~/.cache/twitch
 :>"$log"
 trap 'rm "$log"' EXIT INT TERM
 
+echo "A"
 while read -r stream ; do
     stream=https://twitch.tv/"$stream"
     youtube-dl -q -s "$stream" 1>/dev/null 2> /dev/null &&

@@ -51,4 +51,3 @@ bspc rule -a Zathura state=tiled
 bspc rule -a hterm_terminal hidden=on
 
 
-rm ~/.xsession-errors* 

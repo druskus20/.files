@@ -1,4 +1,4 @@
-#files: 790	version: 5.8
+#files: 780	version: 5.8
 
 _comps=(
 '-' '_precommand'
@@ -86,7 +86,6 @@ _comps=(
 'bibtex' '_bibtex'
 'bindkey' '_bindkey'
 'bison' '_bison'
-'bluetoothctl' '_bluetoothctl'
 'bmake' '_make'
 'bogofilter' '_bogofilter'
 'bogotune' '_bogofilter'
@@ -133,7 +132,6 @@ _comps=(
 'cabal' '_cabal'
 'cal' '_cal'
 'calendar' '_calendar'
-'cargo' '_cargo'
 'cat' '_cat'
 'catchsegv' '_precommand'
 'cc' '_gcc'
@@ -174,8 +172,6 @@ _comps=(
 'cloudkitty' '_openstack'
 'clusterdb' '_postgresql'
 'cmp' '_cmp'
-'cmus' '_cmus'
-'cmus-remote' '_cmus'
 'co' '_rcs'
 'code' '_code'
 'column' '_column'
@@ -259,7 +255,6 @@ _comps=(
 'doas' '_doas'
 'domainname' '_yp'
 'dos2unix' '_dos2unix'
-'downgrade' '_downgrade'
 'drill' '_drill'
 'dropdb' '_postgresql'
 'dropuser' '_postgresql'
@@ -628,7 +623,6 @@ _comps=(
 'join' '_join'
 'journalctl' '_journalctl'
 'jq' '_jq'
-'jupyter' '_jupyter'
 'kdeconnect-cli' '_kdeconnect'
 'kernel-install' '_kernel-install'
 'keystone' '_openstack'
@@ -638,7 +632,6 @@ _comps=(
 'killall' '_killall'
 'killall5' '_killall'
 'kioclient' '_kfmclient'
-'kitty' '_kitty'
 'knock' '_knock'
 'konqueror' '_webbrowser'
 'kpartx' '_kpartx'
@@ -656,6 +649,7 @@ _comps=(
 'ldd' '_ldd'
 'less' '_less'
 'let' '_math'
+'lf' '_lf'
 'lftp' '_ncftp'
 'lha' '_lha'
 'libinput' '_libinput'
@@ -737,10 +731,6 @@ _comps=(
 'mencal' '_mencal'
 'mere' '_mere'
 'merge' '_rcs'
-'meson' '_meson'
-'mesonconf' '_meson'
-'mesonintrospect' '_meson'
-'mesontest' '_meson'
 'metaflac' '_flac'
 'mformat' '_mtools'
 'mgv' '_pspdf'
@@ -822,8 +812,6 @@ _comps=(
 'nedit' '_nedit'
 'nedit-nc' '_nedit'
 'netcat' '_netcat'
-'netctl' '_netctl'
-'netctl-auto' '_netctl'
 'netrik' '_webbrowser'
 'netscape' '_netscape'
 'netstat' '_netstat'
@@ -835,7 +823,6 @@ _comps=(
 'nginx' '_nginx'
 'ngrep' '_ngrep'
 'nice' '_nice'
-'ninja' '_ninja'
 'nkf' '_nkf'
 'nl' '_nl'
 'nm' '_nm'
@@ -880,7 +867,6 @@ _comps=(
 '-parameter-' '_parameter'
 'parec' '_pulseaudio'
 'parecord' '_pulseaudio'
-'pass' '_pass'
 'passwd' '_users'
 'paste' '_paste'
 'pasuspender' '_pulseaudio'
@@ -1001,7 +987,6 @@ _comps=(
 'pyhtmlizer' '_twisted'
 'qdbus' '_qdbus'
 'qiv' '_qiv'
-'qpdf' '_qpdf'
 'quilt' '_quilt'
 'r' '_fc'
 'rake' '_rake'
@@ -1401,7 +1386,6 @@ _comps=(
 'whoami' '_nothing'
 'whois' '_whois'
 'whom' '_mh'
-'wifi-menu' '_netctl'
 'wiggle' '_wiggle'
 'wipefs' '_wipefs'
 'wodim' '_cdrecord'
@@ -1538,9 +1522,6 @@ _services=(
 'lzma' 'xz'
 'Mail' 'mail'
 'mailx' 'mail'
-'mesonconf' 'meson-configure'
-'mesonintrospect' 'meson-introspect'
-'mesontest' 'meson-test'
 'mktunes.pl' 'mktunes'
 'nail' 'mail'
 'ncl' 'nc'
@@ -1636,13 +1617,11 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _alacritty _bluetoothctl _bootctl _bspc _busctl \
-            _cargo _cmus _coredumpctl _curl _downgrade \
-            _hostnamectl _journalctl _jupyter _kernel-install _kitty \
-            _libinput _localectl _loginctl _machinectl _meson \
-            _mkinitcpio _mpv _netctl _networkctl _ninja \
-            _pacman _pass _polybar _polybar_msg _pulseaudio \
-            _qpdf _resolvectl _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes \
+autoload -Uz _alacritty _bootctl _bspc _busctl _coredumpctl \
+            _curl _hostnamectl _journalctl _kernel-install _lf \
+            _libinput _localectl _loginctl _machinectl _mkinitcpio \
+            _mpv _networkctl _pacman _polybar _polybar_msg \
+            _pulseaudio _resolvectl _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes \
             _sd_unit_files _systemctl _systemd _systemd-analyze _systemd-delta \
             _systemd-inhibit _systemd-nspawn _systemd-run _systemd-tmpfiles _timedatectl \
             _udevadm _yay _youtube-dl _zathura _cdr \

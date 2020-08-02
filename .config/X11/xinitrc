@@ -1,13 +1,13 @@
 # xinitrc (sourced by /etc/lightdm/XSession
 
 # Fix dual boot time issue
-# sudo timedatectl set-ntp true
+#sudo timedatectl set-ntp true
 
 # Start some programs
 picom -b --config ~/.config/picom/picom.conf > /dev/null 2> /dev/null &
 #conky --pause=5 -q
+
 setbg /home/druskus/img/bg/fish.jpg &
-# cat .cache/background | xargs betterlockscreen -u &  
 xautolock -time 10 -locker "betterlockscreen --lock blur" &
 
 $HOME/.config/polybar/launch.sh > /dev/null 2> /dev/null  &
@@ -17,12 +17,18 @@ xset -b
 # Finally load keybinding 
 # (so we make sure that they are loaded at the same time as bspwm)
 sxhkd & 
+dunst &
 
 # Speed up keyboard input
 xset r rate 300 50 &	
 
+xrdbr
+
 # Remap escape to capslock
+setxkbmap es
 setxkbmap -option caps:escape
 
 # Set default cursor (so it's not an X while hovering over background)
 xsetroot -cursor_name left_ptr
+
+exec bspwm

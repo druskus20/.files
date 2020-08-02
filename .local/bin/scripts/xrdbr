@@ -1,7 +1,8 @@
 #!/bin/sh
+# Reloads Xresources and generates a new zathurarc
 
-xrdb -merge "$HOME"/.Xresources
-[ -f "$HOME"/.config/zathura/genzathurarc.sh ] && "$HOME"/.config/zathura/genzathurarc.sh > "$HOME"/.config/zathura/zathurarc
+xrdb -merge "$XDG_CONFIG_HOME"/X11/Xresources
 
+[ -f "$XDG_CONFIG_HOME"/zathura/genzathurarc.sh ] && "$XDG_CONFIG_HOME"/zathura/genzathurarc.sh > "$HOME"/.config/zathura/zathurarc
 
-notify-send "Xresources settings have been reloaded"
+notify-send "X11 settings have been reloaded"

@@ -5,7 +5,7 @@ alias grep='grep --colour=auto' alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
 alias open="xdg-open"
-alias la="ls -a"
+alias la="ls -A"
 alias cats='highlight -O ansi --force'
 alias rg="ranger"
 alias todo="vim ~/doc/todo.md"
@@ -44,5 +44,7 @@ alias rm='echo "Fuck you:"'
 # Exclude README from git pull / push
 alias tomato='potato'
 
+alias gpg2="gpg2 --homedir \"$XDG_DATA_HOME\"/gnupg"
 
 alias shutup='shutdown'
+alias startx="startx \"$XDG_CONFIG_HOME/X11/xinitrc\""
