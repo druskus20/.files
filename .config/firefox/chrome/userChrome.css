@@ -54,7 +54,11 @@
   --urlbar-separator-color: transparent !important;
 }
 
-
+#urlbar[breakout][breakout-extend] {
+        top: 0px !important;
+        left: 0px !important;
+        width: 100% !important;
+}
 
 
 /* !!! TABS !!! */
@@ -294,7 +298,6 @@ toolbar#nav-bar {
 
 toolbar#nav-bar {
   padding: 4px !important;
-  padding-bottom: 10px !important;
 }
 
 #urlbar {
