@@ -54,6 +54,9 @@
   --urlbar-separator-color: transparent !important;
 }
 
+
+
+
 /* !!! TABS !!! */
 
 .tab-background[selected="true"] {
@@ -172,7 +175,7 @@ width: 50% !important;
 }
 
 .toolbarbutton-text {
-  color: var(--mff-icon-color)  !important;
+  /*color: var(--mff-icon-color)  !important;*/
 }
 .urlbar-icon {
   color: var(--mff-icon-color)  !important;
@@ -280,12 +283,18 @@ image#star-button {
   display: none;
 }
 
+toolbar#toolbar-menubar {
+  background: #FFFFFF !important;
+  color: var(--mff-urlbar-focused-color) !important;
+}
+
 toolbar#nav-bar {
   padding: var(--mff-nav-toolbar-padding) !important;
 }
 
 toolbar#nav-bar {
   padding: 4px !important;
+  padding-bottom: 10px !important;
 }
 
 #urlbar {
