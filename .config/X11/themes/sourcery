@@ -63,3 +63,9 @@ Firefox.foreground:     #bbc5ff
 Firefox.background:     #282a36
 Firefox.altbackground:  #323440
 
+!!! DUNST !!! (and startpage)
+Dunst.foreground:     #bbc5ff
+Dunst.background:     #282a36
+Dunst.frame_color:    #bbc5ff
+
+
