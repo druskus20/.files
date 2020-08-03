@@ -49,12 +49,12 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 # Utilities
 export EDITOR=/usr/bin/nvim
-export BROWSER="$HOME"/.local/bin/scripts/firefox
+#export BROWSER="$HOME"/.local/bin/scripts/firefox
 export TERMINAL="$HOME"/.local/bin/scripts/tdaemon
 export PATH="$HOME"/.local/bin:"$HOME"/.local/bin/scripts:"$PATH"
 
 
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-        startx
+        startx "$XDG_CONFIG_HOME"/X11/xinitrc
 fi
