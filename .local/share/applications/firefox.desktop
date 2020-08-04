@@ -5,8 +5,9 @@ Type=Application
 NoDisplay=true
 # Wrapper script
 #  GTK_THEME fixes a problem with xdg open, discord and the phocus theme
-Exec=env GTK_THEME=Adwaita /home/druskus/.local/bin/scripts/firefox %u
+#Exec=/home/druskus/.local/bin/scripts/firefox %u
 
+Exec=env GTK_THEME=Adwaita /home/druskus/.local/bin/scripts/firefox %u
 #Exec=/bin/firefox %u
 Name=Firefox
 Comment=Custom definition for Firefox

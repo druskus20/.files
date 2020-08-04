@@ -13,4 +13,5 @@ sed -i "s/^    background = .*$/    background = \"$background\"/g
         s/^    frame_color = .*$/    frame_color = \"$frame_color\"/g" "$path"/dunstrc 
 
 killall -q dunst
-dunst & disown
+dunst & 
+

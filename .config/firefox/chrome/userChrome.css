@@ -14,9 +14,14 @@
   --mff-bg: var(--background);
   --mff-tab-selected-color: var(--background);
   --mff-sidebar-bg: var(--background);
+  
+  
   --mff-icon-color: var(--foreground);
-  --mff-sidebar-color: var(--foreground);
   --mff-urlbar-focused-color: var(--foreground);
+  
+  
+    --mff-sidebar-color: var(--foreground);
+  
   --mff-urlbar-results-color: var(--foreground);
   --mff-urlbar-results-url-color: var(--foreground);
   --mff-urlbar-color: var(--foreground);
@@ -58,6 +63,31 @@
         top: 0px !important;
         left: 0px !important;
         width: 100% !important;
+}
+
+#titlebar #toolbar-menubar {
+        padding: 0px !important;
+}
+#navigator-toolbox #titlebar {
+        padding-top: 10px !important;
+        background: var(--mff-bg) !important;
+}
+
+#toolbar-menubar #menubar-items {
+        background: var(--mff-bg) !important;
+}
+
+
+#toolbar-menubar #menubar-items #main-menubar > menu > label {
+        color: var(--mff-icon-color) !important;
+}
+#toolbar-menubar #menubar-items #main-menubar > menu {
+  background: #FFF !important;;
+}
+
+#toolbar-menubar spacer {
+        background: var(--mff-bg) !important;
+        color: var(--mff-icon-color) !important;
 }
 
 
