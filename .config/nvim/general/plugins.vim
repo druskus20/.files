@@ -9,15 +9,18 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'joshdick/onedark.vim'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'preservim/nerdtree'                           " File tree
+Plug 'vim-airline/vim-airline'                      " Status line at the bottom
+Plug 'vim-airline/vim-airline-themes'               " Airline themes
+Plug 'joshdick/onedark.vim'                         " Color scheme
+Plug 'drewtempelmeyer/palenight.vim'                " Color scheme
+Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Completion
+Plug 'dpelle/vim-LanguageTool'
+
 " Plug 'valloric/youcompleteme'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'ryanoasis/vim-devicons'
-Plug 'dpelle/vim-LanguageTool'
 " Plug 'mhinz/vim-startify'
+"
 call plug#end()

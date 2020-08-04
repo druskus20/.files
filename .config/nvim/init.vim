@@ -15,7 +15,7 @@ highlight nonText ctermbg=NONE
 " Set custom .viminfo path
 set viminfo='10,<100,:100,%,n$XDG_CACHE_HOME/nvim/.viminfo
 
-" Set runtime directory
+" Set runtime directory. Related to the zsh syntax hightlighting fix
 set runtimepath=$XDG_CONFIG_HOME/nvim,$VIMRUNTIME,$XDG_CONFIG_HOME/nvim/after
 
 " Source vim modular config files
