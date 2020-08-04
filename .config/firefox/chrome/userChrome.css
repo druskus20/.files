@@ -264,11 +264,13 @@ width: 50% !important;
 }
 
 #back-button {
-  list-style-image: url("left-arrow.svg") !important;
+ /* list-style-image: url("left-arrow.svg") !important; */
+ display: none;
 }
 
 #forward-button {
-  list-style-image: url("right-arrow.svg") !important;
+/*  list-style-image: url("right-arrow.svg") !important;*/
+  display: none;
 }
 
 toolbar {

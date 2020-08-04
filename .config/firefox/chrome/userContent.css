@@ -1,4 +1,3 @@
-
 @import url("userChrome.css");
 
 /* Removes white loading page */
@@ -17,7 +16,8 @@
 
 
   @-moz-document url(about:privatebrowsing) {
-        :root{
-          scrollbar-width: none !important;
-        }
+
+  :root{
+    scrollbar-width: none !important;
+  }
   }
