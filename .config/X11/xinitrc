@@ -1,30 +1,36 @@
-# xinitrc (sourced by /etc/lightdm/XSession
+# xinitrc 
 
 # Fix dual boot time issue
 #sudo timedatectl set-ntp true
 
-# Start some programs
+# Phisch's version of the picom compositor
 phicom -b --config ~/.config/picom/picom.conf > /dev/null 2> /dev/null &
 #conky --pause=5 -q
 
+# Set bg and generate lockscreen
 setbg /home/druskus/img/bg/fish.jpg &
 xautolock -time 10 -locker "betterlockscreen --lock blur" &
 
 $HOME/.config/polybar/launch.sh > /dev/null 2> /dev/null  &
-# Disable pc speaker
-xset -b
 
-# Finally load keybinding 
-# (so we make sure that they are loaded at the same time as bspwm)
+# Disable pc speaker
+#  sudo modprobe -r pcspkr 
+#xset -b
+
+# Load keybindings
 sxhkd & 
+
+# Notification daemon
 dunst &
 
 # Speed up keyboard input
 xset r rate 300 50 &	
 
+# Load and generate Xresources configs
 xrdbr
 
-# Remap escape to capslock
+# Set kb layout and remap escape to capslock
+#  can be done in /etc/X11/xorg.conf
 setxkbmap es
 setxkbmap -option caps:escape
 

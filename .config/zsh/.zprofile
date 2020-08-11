@@ -12,7 +12,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # Move some config files
 export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" 
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
-export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+#export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export LESSKEY="$XDG_CONFIG_HOME/less/lesskey"
 export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
 export VIMINIT=":source $XDG_CONFIG_HOME/nvim/init.vim"
