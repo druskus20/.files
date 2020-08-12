@@ -12,7 +12,6 @@ log=~/.cache/twitch
 :>"$log"
 trap 'rm "$log"' EXIT INT TERM
 
-echo "A"
 while read -r stream ; do
     stream=https://twitch.tv/"$stream"
     youtube-dl -q -s "$stream" 1>/dev/null 2> /dev/null &&
