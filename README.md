@@ -2,7 +2,7 @@
   <img width="100%" src="git-images/dotfiles.svg">
 </p>
 
-### FAQ
+
 #### What the fuck is a dotfile?
 If you have ever used linux, you have probably seen those hidden files that start with a ".". Well, thats why they are called dotfiles. Those files are usually configuration files.
 
