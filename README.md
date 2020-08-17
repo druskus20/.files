@@ -1,8 +1,5 @@
-# dotfiles •••
-
-
 <p align="center">
-  <img src="git-images/dotfiles.svg">
+  <img width="100%" src="git-images/dotfiles.svg">
 </p>
 
 ### FAQ
