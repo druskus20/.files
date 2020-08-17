@@ -1,7 +1,9 @@
 # dotfiles •••
 
-![](git-images/1588125301.png)
 
+<p align="center">
+  <img src="git-images/dotfiles.svg">
+</p>
 
 ### FAQ
 #### What the fuck is a dotfile?
@@ -18,6 +20,7 @@ I figured out a workaround by running the following command:
 ```git update-index --assume-unchanged "$HOME/README.md"```
 That of course will not work if README.md is updated from the remote. Thats why I check if there is a README.md in my home folder and delete it. (see .local/bin/scripts/dots)
 
-## More Images
+## Images
+![](git-images/1588125301.png)
 ![](git-images/1588126735.png)
 
