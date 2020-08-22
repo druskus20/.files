@@ -1,0 +1,6 @@
+#!/bin/sh
+# Init script for xob bar
+
+mkfifo /tmp/xobpipe 2> /dev/null
+tail -f /tmp/xobpipe | xob 
+
