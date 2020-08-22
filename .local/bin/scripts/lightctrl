@@ -16,5 +16,6 @@ else
         echo "Option $1 not found, use either \"-i\" or \"-d\"" && exit
 fi
 
+# Outputs the current brightness into the xob pipe file
 printf "%.0f\n" $(light) > /tmp/xobpipe 
 
