@@ -6,4 +6,6 @@ xrdb -merge "$XDG_CONFIG_HOME"/X11/Xresources
 [ -f "$XDG_CONFIG_HOME"/firefox/startpage/gencolors.sh ] && "$XDG_CONFIG_HOME"/firefox/startpage/gencolors.sh 
 [ -f "$XDG_CONFIG_HOME"/firefox/chrome/gencolors.sh ] && "$XDG_CONFIG_HOME"/firefox/chrome/gencolors.sh 
 [ -f "$XDG_CONFIG_HOME"/dunst/gencolors.sh ] && "$XDG_CONFIG_HOME"/dunst/gencolors.sh 
+[ -f "$XDG_CONFIG_HOME"/xob/gencolors.sh ] && "$XDG_CONFIG_HOME"/xob/gencolors.sh 
+xobinit
 echo "X11 settings have been reloaded"
