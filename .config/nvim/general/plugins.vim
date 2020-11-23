@@ -17,7 +17,7 @@ Plug 'joshdick/onedark.vim'                         " Color scheme
 Plug 'drewtempelmeyer/palenight.vim'                " Color scheme
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Completion
 Plug 'dpelle/vim-LanguageTool'
-
+Plug 'psliwka/vim-smoothie'
 " Plug 'valloric/youcompleteme'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'ryanoasis/vim-devicons'

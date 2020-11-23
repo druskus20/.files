@@ -58,7 +58,7 @@ format-offset     =
 ####################
 
 [bar/top-desktop]
-monitor     = ${env:MONITOR}
+#monitor     = ${env:MONITOR}
 
 background  = ${colors.background}
 foreground  = ${colors.foreground}
@@ -103,6 +103,6 @@ border-bottom-size = 0
 fixed-center   = true 
 modules-left   = bspwm arrow2 cmus spotify
 modules-center = 
-modules-right  = arrow-end filesystem arrow-cyan updates-arch-aur arrow-magenta amdgpu arrow-red pulseaudio arrow-green temperature arrow-yellow cpu arrow-blue memory arrow-cyan eth arrow-magenta date arrow-red time 
+modules-right  = arrow-end filesystem arrow-cyan updates-arch-aur arrow-magenta nvidia arrow-red pulseaudio arrow-green temperature arrow-yellow cpu arrow-blue memory arrow-cyan eth arrow-magenta date arrow-red time 
 
 

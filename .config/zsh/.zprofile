@@ -50,7 +50,7 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 # Utilities
 export EDITOR=/usr/bin/nvim
 export BROWSER="$HOME"/.local/bin/scripts/firefox
-export MONITOR="HDMI-A-0"
+export MONITOR="HDMI-0"
 export TERMINAL="$HOME"/.local/bin/scripts/tdaemon
 #export TERMINAL="/bin/alacritty"
 export PATH="$HOME"/.local/bin:"$HOME"/.local/bin/scripts:"$PATH"
