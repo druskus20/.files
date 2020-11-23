@@ -8,4 +8,5 @@
 
 # Removes README if present
 [ -f "$HOME"/README.md ] && /usr/bin/git --git-dir="$HOME"/.config/dots/ --work-tree="$HOME" update-index --assume-unchanged "$HOME"/README.md && rm "$HOME"/README.md
+[ -d "$HOME"/git-images ] && /usr/bin/git --git-dir="$HOME"/.config/dots/ --work-tree="$HOME" update-index --assume-unchanged "$HOME"/git-images/* && rm "$HOME"/git-images
 
